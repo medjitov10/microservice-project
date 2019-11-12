@@ -7,6 +7,8 @@ public interface UserService {
 
     public Iterable<User> getAll();
 
+    public User getUser();
+
 //    public User searchById(long id);
 //
 //    public Iterable<User> searchByName(String name);

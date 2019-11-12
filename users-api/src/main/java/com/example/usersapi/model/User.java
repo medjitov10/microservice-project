@@ -15,14 +15,18 @@ public class User {
     @Column(name = "username")
     private String lastName;
 
-    public User() {}
-
-    public User(long id, String userName, String firstName, String lastName) {
-        this.id = id;
-        this.userName = userName;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public Profile getProfile() {
+        return profile;
     }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
+
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    private Profile profile;
+
+    public User() {}
 
     public long getId() {
         return id;

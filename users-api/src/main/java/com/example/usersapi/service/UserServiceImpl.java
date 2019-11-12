@@ -16,6 +16,10 @@ public class UserServiceImpl implements UserService {
     public Iterable<User> getAll() {
         return userRepository.findAll();
     }
+
+    public User getUser() {
+        return null;
+    }
 //
 //    @Override
 //    public User searchById(long id) {
