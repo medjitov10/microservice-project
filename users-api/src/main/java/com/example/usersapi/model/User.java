@@ -11,14 +11,15 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @Column(name = "email")
+
+    @Column(name = "email", unique = true, nullable = false)
     private String email;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Column(name = "password", nullable = false)
     private String password;
 
-    @Column(name = "username")
+    @Column(name = "username", unique = true, nullable = false)
     private String username;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")

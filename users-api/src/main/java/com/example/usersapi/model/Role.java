@@ -1,12 +1,10 @@
 package com.example.usersapi.model;
 
-import rx.BackpressureOverflow;
-
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name="role")
+@Table(name="roles")
 public class Role {
 
     @Id
@@ -14,7 +12,7 @@ public class Role {
     @Column
     private long id;
 
-    @Column
+    @Column(unique = true, nullable = false)
     private String name;
 
     @ManyToMany(mappedBy = "roles")

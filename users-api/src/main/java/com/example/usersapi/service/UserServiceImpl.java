@@ -37,11 +37,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<String> signUp(User user) {
-
         user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
-        User savedUser = userRepository.save(user);
 
-        if(savedUser != null) {
+        if(userRepository.save(user) != null) {
             UserDetails userDetails = loadUserByUsername(user.getUsername());
             return Arrays.asList( jwtUtil.generateToken(userDetails),user.getUsername());
 
@@ -51,11 +49,8 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<String> logIn(User user) {
-
-
-        User savedUser = userRepository.save(user);
-        Long nullLong = null;
-        if( savedUser.getId() != nullLong && savedUser != null) {
+        User savedUser = userRepository.findByUsername(user.getUsername());
+        if( savedUser != null && bCryptPasswordEncoder.matches(user.getPassword(), savedUser.getPassword())) {
             UserDetails userDetails = loadUserByUsername(user.getUsername());
             return Arrays.asList( jwtUtil.generateToken(userDetails),user.getUsername());
         }
@@ -92,7 +87,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Profile getProfile(String token) {
-        return null;
+        String username = jwtUtil.getUsernameFromToken(jwtUtil.pureToken(token));
+        User user = userRepository.findByUsername(username);
+        return user.getProfile();
     }
 
     @Override
