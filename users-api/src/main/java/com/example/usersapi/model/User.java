@@ -1,6 +1,7 @@
 package com.example.usersapi.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -15,6 +16,24 @@ public class User {
     @Column(name = "username")
     private String lastName;
 
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    private Profile profile;
+
+    @ManyToMany
+    @JoinTable(
+        name="user_role",
+            joinColumns = @JoinColumn(name ="role_id"),
+            inverseJoinColumns = @JoinColumn(name="user_id"))
+    List<Role> roles;
+
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
     public Profile getProfile() {
         return profile;
     }
@@ -22,9 +41,6 @@ public class User {
     public void setProfile(Profile profile) {
         this.profile = profile;
     }
-
-    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
-    private Profile profile;
 
     public User() {}
 
@@ -60,14 +76,14 @@ public class User {
         this.lastName = lastName;
     }
 
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        s.append("User{")
-                .append("id:").append(id)
-                .append(",userName:").append(userName)
-                .append(",firstName:").append(firstName)
-                .append(",lastName:").append(lastName)
-                .append("}");
-        return s.toString();
-    }
+//    public String toString() {
+//        StringBuilder s = new StringBuilder();
+//        s.append("User{")
+//                .append("id:").append(id)
+//                .append(",userName:").append(userName)
+//                .append(",firstName:").append(firstName)
+//                .append(",lastName:").append(lastName)
+//                .append("}");
+//        return s.toString();
+//    }
 }
