@@ -1,5 +1,7 @@
 package com.example.usersapi.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.util.List;
 
@@ -10,11 +12,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     @Column(name = "email")
-    private String userName;
-    @Column(name = "password")
-    private String firstName;
+    private String email;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @Column(name = "password", nullable = false)
+    private String password;
+
     @Column(name = "username")
-    private String lastName;
+    private String username;
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
     private Profile profile;
@@ -26,12 +31,36 @@ public class User {
             inverseJoinColumns = @JoinColumn(name="user_id"))
     List<Role> roles;
 
-    public List<Role> getRoles() {
-        return roles;
+    public long getId() {
+        return id;
     }
 
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Profile getProfile() {
@@ -42,48 +71,14 @@ public class User {
         this.profile = profile;
     }
 
+    public List<Role> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Role> roles) {
+        this.roles = roles;
+    }
+
     public User() {}
 
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-//    public String toString() {
-//        StringBuilder s = new StringBuilder();
-//        s.append("User{")
-//                .append("id:").append(id)
-//                .append(",userName:").append(userName)
-//                .append(",firstName:").append(firstName)
-//                .append(",lastName:").append(lastName)
-//                .append("}");
-//        return s.toString();
-//    }
 }

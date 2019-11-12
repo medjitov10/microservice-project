@@ -1,13 +1,25 @@
 package com.example.usersapi.service;
 
+import com.example.usersapi.model.Profile;
 import com.example.usersapi.model.User;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-public interface UserService {
+import java.util.List;
 
-    public Iterable<User> getAll();
+public interface UserService extends UserDetailsService {
 
-    public User getUser();
+    public List<User> listUsers();
+
+    public List<String> signUp(User user);
+
+    public List<String> logIn(User user);
+
+    public Profile createProfile(Profile profile, String tokenHeader);
+
+    public Profile getProfile(String token);
+
+    public Profile updateProfile(Profile profile, String tokenHeader);
 
 //    public User searchById(long id);
 //
