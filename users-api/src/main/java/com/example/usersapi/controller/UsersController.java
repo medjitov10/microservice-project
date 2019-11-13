@@ -14,6 +14,12 @@ public class UsersController {
     @Autowired
     private UserService userService;
 
+    @GetMapping("/list")
+    public Iterable<User> listUsers(@RequestHeader("username") String username) {
+        System.out.println(username);
+        return userService.listUsers();
+    }
+
     @PostMapping("/signup")
     public ResponseEntity<?> signup(@RequestBody User user) {
         return ResponseEntity.ok(new JwtResponse(userService.signUp(user)));
