@@ -30,6 +30,8 @@ public class UsersController {
         return ResponseEntity.ok(new JwtResponse(userService.logIn(user)));
     }
 
+
+
 //    @GetMapping("/view/{id}")
 //    public User searchById(@PathVariable long id) {
 //        return userService.searchById(id);

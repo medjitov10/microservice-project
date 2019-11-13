@@ -2,6 +2,7 @@ package com.example.usersapi.service;
 
 import com.example.usersapi.config.JwtUtil;
 import com.example.usersapi.model.Profile;
+import com.example.usersapi.model.Role;
 import com.example.usersapi.model.User;
 import com.example.usersapi.repository.ProfileRepository;
 import com.example.usersapi.repository.UserRepository;
@@ -39,9 +40,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<String> signUp(User user) {
-//        user.setPassword(encoder.encode(user.getPassword()));
         user.setPassword(encoder().encode(user.getPassword()));
-
+        Role role = new Role();
+        role.setName("ROLE_USER");
+        user.setRoles(role);
         if(userRepository.save(user) != null) {
             return Arrays.asList( jwtUtil.generateToken(user.getUsername()), user.getUsername());
 

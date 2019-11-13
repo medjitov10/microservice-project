@@ -1,13 +1,21 @@
 package com.example.usersapi.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name = "users")
 public class User {
+
+    @JsonIdentityInfo(
+            generator = ObjectIdGenerators.PropertyGenerator.class,
+            property = "id")
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -22,6 +30,7 @@ public class User {
     @Column(name = "username", unique = true, nullable = false)
     private String username;
 
+
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
     private Profile profile;
 
@@ -31,6 +40,13 @@ public class User {
             joinColumns = @JoinColumn(name ="role_id"),
             inverseJoinColumns = @JoinColumn(name="user_id"))
     List<Role> roles;
+
+    public List<Role> addRole(Role role) {
+        if(roles == null)
+            roles = new ArrayList<>();
+        roles.add(role);
+        return roles;
+    }
 
     public long getId() {
         return id;
