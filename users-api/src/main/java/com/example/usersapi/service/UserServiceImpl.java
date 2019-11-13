@@ -5,6 +5,7 @@ import com.example.usersapi.model.Profile;
 import com.example.usersapi.model.Role;
 import com.example.usersapi.model.User;
 import com.example.usersapi.repository.ProfileRepository;
+import com.example.usersapi.repository.RoleRepository;
 import com.example.usersapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -26,6 +27,9 @@ public class UserServiceImpl implements UserService {
     private ProfileRepository profileRepository;
 
     @Autowired
+    private RoleRepository roleRepository;
+
+    @Autowired
     JwtUtil jwtUtil;
 
     @Bean
@@ -43,7 +47,10 @@ public class UserServiceImpl implements UserService {
         user.setPassword(encoder().encode(user.getPassword()));
         Role role = new Role();
         role.setName("ROLE_USER");
-        user.setRoles(role);
+
+        roleRepository.save(role);
+
+        user.addRole(role);
         if(userRepository.save(user) != null) {
             return Arrays.asList( jwtUtil.generateToken(user.getUsername()), user.getUsername());
 

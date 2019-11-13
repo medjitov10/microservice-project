@@ -34,6 +34,9 @@ public class User {
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
     private Profile profile;
 
+//    (cascade = {CascadeType.DETACH,
+//            CascadeType.MERGE, CascadeType.REFRESH})
+
     @ManyToMany
     @JoinTable(
         name="user_role",
