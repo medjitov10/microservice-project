@@ -11,15 +11,15 @@ public class ProfileController {
     @Autowired
     private UserService userService;
 
-//    @GetMapping
-//    public Profile getProfile(@RequestHeader("Authorization") String tokenHeader) {
-//        return userService.getProfile(tokenHeader);
-//    }
-//
-//    @PostMapping
-//    public Profile createProfile(@RequestHeader("Authorization") String tokenHeader, @RequestBody Profile profile) {
-//        return userService.createProfile(profile, tokenHeader);
-//    }
+    @GetMapping
+    public Profile getProfile(@RequestHeader("username") String username) {
+        return userService.getProfile(username);
+    }
+
+    @PostMapping
+    public Profile createProfile(@RequestHeader("username") String username, @RequestBody Profile profile) {
+        return userService.createProfile(profile, username);
+    }
 
 }
 
