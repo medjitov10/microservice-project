@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RestController
+//@RestController
 public class PostsApiApplication {
 
-	@RequestMapping("/")
-	public String home() {
-		return "some posts";
-	}
+//	@RequestMapping("/")
+//	public String home() {
+//		return "some posts";
+//	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(PostsApiApplication.class, args);
