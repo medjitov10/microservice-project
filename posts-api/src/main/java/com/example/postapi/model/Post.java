@@ -11,7 +11,7 @@ public class Post {
     @Column(name="id")
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String title;
 
     @Column
