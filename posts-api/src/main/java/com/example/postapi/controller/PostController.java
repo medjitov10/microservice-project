@@ -3,7 +3,10 @@ package com.example.postapi.controller;
 import com.example.postapi.model.Post;
 import com.example.postapi.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class PostController {
@@ -16,7 +19,20 @@ public class PostController {
         return postService.createPost(username, post);
     }
 
-//    @GetMapping
-//    public Post getPost(@)
+    @GetMapping("/all")
+    public Iterable<Post> allPosts(){
+        return postService.findAll();
+    }
 
+    @DeleteMapping("/{postId}")
+    public HttpStatus deletePost(@PathVariable Long postId){
+        postService.deletePost(postId);
+        return HttpStatus.OK;
+    }
+
+    @GetMapping("/user")
+    public List<Post> getPostByUser(@RequestHeader("username") String username){
+        return postService.getPostByUser(username);
+
+    }
 }
