@@ -8,13 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @EnableEurekaClient
-@RestController
 public class CommentsApiApplication {
-
-	@RequestMapping("/")
-	public String home() {
-		return "some comments";
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(CommentsApiApplication.class, args);

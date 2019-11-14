@@ -16,7 +16,6 @@ public class UsersController {
 
     @GetMapping("/list")
     public Iterable<User> listUsers(@RequestHeader("username") String username) {
-        System.out.println(username);
         return userService.listUsers();
     }
 
