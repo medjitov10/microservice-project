@@ -1,6 +1,8 @@
 package com.example.postapi.controller;
 
+import com.example.postapi.model.Comment;
 import com.example.postapi.model.Post;
+import com.example.postapi.service.CommentService;
 import com.example.postapi.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -13,6 +15,9 @@ public class PostController {
 
     @Autowired
     PostService postService;
+
+    @Autowired
+    CommentService commentService;
 
     @PostMapping
     public Post createPost(@RequestHeader("username") String username, @RequestBody Post post){
@@ -34,5 +39,10 @@ public class PostController {
     public List<Post> getPostByUser(@RequestHeader("username") String username){
         return postService.getPostByUser(username);
 
+    }
+
+    @GetMapping("/{postId}/comment")
+    public List<Comment> getCommentsByPostId(@PathVariable Long postId) {
+        return commentService.getCommentsByPostId(postId);
     }
 }

@@ -11,5 +11,6 @@ import java.util.List;
 
 @Repository
 public interface CommentRepository extends CrudRepository<Comment, Long> {
-    List<Comment> findByUserId(long userId);
+    List<Comment> findByUserId(Long userId);
+    List<Comment> findByPostId(Long postId);
 }
