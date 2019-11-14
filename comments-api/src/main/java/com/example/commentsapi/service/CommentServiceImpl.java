@@ -3,7 +3,6 @@ package com.example.commentsapi.service;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.model.User;
 import com.example.commentsapi.repository.CommentRepository;
-import com.example.commentsapi.repository.CommentUserRepository;
 import com.example.commentsapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,14 +18,11 @@ public class CommentServiceImpl implements CommentService {
     @Autowired
     CommentRepository commentRepository;
 
-    @Autowired
-    CommentUserRepository commentUserRepository;
-
     @Override
     public Comment createComment(Long postId, String username, Comment comment) {
         User user = userRepository.getUserByUsername(username);
-        comment.setUser_id(user.getId());
-        comment.setPost_id(postId);
+        comment.setUserId(user.getId());
+        comment.setPostId(postId);
         return commentRepository.save(comment);
     }
 
@@ -39,6 +35,6 @@ public class CommentServiceImpl implements CommentService {
     @Override
     public List<Comment> getCommentsByUser(String username) {
         User user = userRepository.getUserByUsername(username);
-        return commentUserRepository.getCommentByUserId(user.getId());
+        return commentRepository.findByUserId(user.getId());
     }
 }

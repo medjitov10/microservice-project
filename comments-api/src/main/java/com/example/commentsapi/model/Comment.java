@@ -15,17 +15,10 @@ public class Comment {
     private String text;
 
     @Column
-    private Long post_id;
-
-    public Comment(Long id, String text, Long post_id, Long user_id) {
-        this.id = id;
-        this.text = text;
-        this.post_id = post_id;
-        this.user_id = user_id;
-    }
+    private Long postId;
 
     @Column
-    private Long user_id;
+    private Long userId;
 
     public Comment() {}
 
@@ -45,19 +38,19 @@ public class Comment {
         this.text = text;
     }
 
-    public Long getPost_id() {
-        return post_id;
+    public Long getPostId() {
+        return postId;
     }
 
-    public void setPost_id(Long post_id) {
-        this.post_id = post_id;
+    public void setPostId(Long postId) {
+        this.postId = postId;
     }
 
-    public Long getUser_id() {
-        return user_id;
+    public Long getUserId() {
+        return userId;
     }
 
-    public void setUser_id(Long user_id) {
-        this.user_id = user_id;
+    public void setUserId(Long userId) {
+        this.userId = userId;
     }
 }
