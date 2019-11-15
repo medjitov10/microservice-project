@@ -1,6 +1,6 @@
-package com.example.commentsapi.serializer;
+package com.example.postapi.serializer;
 
-import com.example.commentsapi.model.Comment;
+import com.example.postapi.model.Comment;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;

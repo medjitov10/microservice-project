@@ -1,5 +1,9 @@
 package com.example.postapi.model;
 
+import com.example.postapi.serializer.CommentSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
+@JsonSerialize(using = CommentSerializer.class)
 public class Comment {
 
     private long id;
@@ -8,7 +12,7 @@ public class Comment {
 
     private Long postId;
 
-    private Long userId;
+    private String username;
 
     public Comment() {}
 
@@ -36,11 +40,11 @@ public class Comment {
         this.postId = postId;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.postapi.controller.serializer;
+package com.example.postapi.serializer;
 
 import com.example.postapi.model.Post;
 import com.fasterxml.jackson.core.JsonGenerator;
@@ -9,7 +9,11 @@ import java.io.IOException;
 
 public class PostSerializer extends StdSerializer<Post> {
 
-    protected PostSerializer(Class<Post> t) {
+    public PostSerializer() {
+        this(null);
+    }
+
+    public PostSerializer(Class<Post> t) {
         super(t);
     }
 

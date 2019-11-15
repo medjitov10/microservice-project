@@ -20,8 +20,7 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public Comment createComment(Long postId, String username, Comment comment) {
-        User user = userRepository.getUserByUsername(username);
-        comment.setUserId(user.getId());
+        comment.setUsername(username);
         comment.setPostId(postId);
         return commentRepository.save(comment);
     }
@@ -34,7 +33,6 @@ public class CommentServiceImpl implements CommentService {
 
     @Override
     public List<Comment> getCommentsByUser(String username) {
-        User user = userRepository.getUserByUsername(username);
-        return commentRepository.findByUserId(user.getId());
+        return commentRepository.findByUsername(username);
     }
 }

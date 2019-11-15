@@ -41,7 +41,6 @@ public class PostServiceImpl implements PostService {
 
     @Override
     public List<Post> getPostByUser(String username) {
-        User user = userRepository.getUserByUsername(username);
-        return postRepository.findByUserId(user.getId());
+        return postRepository.findByUsername(username);
     }
 }

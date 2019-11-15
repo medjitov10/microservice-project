@@ -8,6 +8,5 @@ import java.util.List;
 
 @Repository
 public interface PostRepository extends CrudRepository<Post, Long> {
-    public List<Post> findByUserId(Long userId);
-//    public List<Post> findAllByUserId
+    public List<Post> findByUsername(String username);
 }
