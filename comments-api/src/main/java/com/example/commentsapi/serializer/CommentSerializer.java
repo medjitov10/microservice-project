@@ -17,14 +17,12 @@ public class CommentSerializer extends StdSerializer<Comment> {
         super(t);
     }
 
-
     @Override
     public void serialize(Comment comment, JsonGenerator gen, SerializerProvider provider) throws IOException {
         gen.writeStartObject();
         gen.writeNumberField("id", comment.getId());
         gen.writeStringField("text", comment.getText());
         gen.writeNumberField("postId", comment.getPostId());
-        gen.writeStringField("username", comment.getUsername());
         gen.writeObjectFieldStart("user");
         gen.writeStringField("username", comment.getUsername());
         gen.writeEndObject();
