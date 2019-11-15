@@ -45,8 +45,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<String> signUp(User user) {
         user.setPassword(encoder().encode(user.getPassword()));
-        Role role = new Role();
-        role.setName("ROLE_USER");
+        Role role = roleRepository.findById(1l).orElse(new Role("ROLE_USER"));
 
         roleRepository.save(role);
 

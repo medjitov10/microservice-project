@@ -17,6 +17,8 @@ public class PostServiceImpl implements PostService {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    CommentService commentService;
     @Override
     public Post createPost(String username, Post post) {
         User user = userRepository.getUserByUsername(username);
@@ -32,7 +34,10 @@ public class PostServiceImpl implements PostService {
     @Override
     public void deletePost(Long postId){
         Post post = postRepository.findById(postId).orElse(null);
-        postRepository.delete(post);
+        if(post != null) {
+            commentService.deleteCommentsByPostId(postId);
+            postRepository.delete(post);
+        }
     }
 
     @Override
