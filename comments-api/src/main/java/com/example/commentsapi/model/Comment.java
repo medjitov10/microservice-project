@@ -5,6 +5,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name="comments")
+
 public class Comment {
     @Id
     @Column
@@ -18,7 +19,7 @@ public class Comment {
     private Long postId;
 
     @Column
-    private Long userId;
+    private String username;
 
     public Comment() {}
 
@@ -46,11 +47,11 @@ public class Comment {
         this.postId = postId;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

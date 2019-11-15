@@ -21,8 +21,7 @@ public class PostServiceImpl implements PostService {
     CommentService commentService;
     @Override
     public Post createPost(String username, Post post) {
-        User user = userRepository.getUserByUsername(username);
-        post.setUser_id(user.getId());
+        post.setUsername(username);
         return postRepository.save(post);
     }
 
