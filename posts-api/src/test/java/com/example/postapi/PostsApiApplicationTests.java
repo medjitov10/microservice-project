@@ -1,13 +1,13 @@
-package com.example.postapi;
+//package com.example.postapi;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+//import org.junit.jupiter.api.Test;
+//import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class PostsApiApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
-}
+//@SpringBootTest
+//class PostsApiApplicationTests {
+//
+//	@Test
+//	void contextLoads() {
+//	}
+//
+//}

@@ -1,0 +1,8 @@
+    applications:
+    - name: spring-boot-microservices-eureka
+      memory: 512M
+      instances: 1
+      docker:
+        image: david8015/eureka:4
+      env:
+        SPRING_PROFILES_ACTIVE: local
