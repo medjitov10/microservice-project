@@ -52,7 +52,6 @@ public class UserServiceImpl implements UserService {
         user.addRole(role);
         if(userRepository.save(user) != null) {
             return Arrays.asList( jwtUtil.generateToken(user.getUsername()), user.getUsername());
-
         }
         return null;
     }
@@ -63,7 +62,6 @@ public class UserServiceImpl implements UserService {
         if( savedUser != null && encoder().matches(user.getPassword(), savedUser.getPassword())) {
             return Arrays.asList( jwtUtil.generateToken(user.getUsername()), savedUser.getUsername());
         }
-
         return null;
     }
 
@@ -71,12 +69,18 @@ public class UserServiceImpl implements UserService {
     @Override
     public Profile createProfile(Profile profile, String username) {
         User user = userRepository.findByUsername(username);
-
+        if(user.getProfile() != null) {
+            profile.setId(user.getProfile().getId());
+        }
         profile.setUser(user);
+        System.out.println("================");
+        System.out.println("================");
+        System.out.println("================");
+        System.out.println("================");
+        System.out.println("================");
+        System.out.println(profile.getId());
+        System.out.println("================");
         profileRepository.save(profile);
-        System.out.println("============================================");
-        System.out.println(user.getId());
-        System.out.println("============================================");
         return user.getProfile();
     }
 
@@ -91,38 +95,4 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-
-//
-//    @Override
-//    public User searchById(long id) {
-//        return userRepository.findById(id).get();
-//    }
-//
-//    @Override
-//    public Iterable<User> searchByName(String name) {
-//        String normalized = name.trim().toLowerCase();
-//        return userRepository.findByFirstNameContainsOrLastNameContains(normalized, normalized);
-//    }
-//
-//    @Override
-//    public HttpStatus deleteUser(long id) {
-//        userRepository.deleteById(id);
-//        return HttpStatus.OK;
-//    }
-//
-//    @Override
-//    public HttpStatus createUser(User user) {
-//        userRepository.save(user);
-//        return HttpStatus.OK;
-//    }
-//
-//    @Override
-//    public HttpStatus updateUser(long id, User userRequest) {
-//        User user = userRepository.findById(id).get();
-//        user.setUserName(userRequest.getUserName());
-//        user.setFirstName(userRequest.getFirstName());
-//        user.setLastName(userRequest.getLastName());
-//        userRepository.save(user);
-//        return HttpStatus.OK;
-//    }
 }

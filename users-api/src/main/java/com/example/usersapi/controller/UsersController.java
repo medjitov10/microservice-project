@@ -28,6 +28,4 @@ public class UsersController {
     public ResponseEntity<?> login(@RequestBody User user) {
         return ResponseEntity.ok(new JwtResponse(userService.logIn(user)));
     }
-
-
 }

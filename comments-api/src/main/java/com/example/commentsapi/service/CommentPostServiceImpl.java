@@ -16,24 +16,18 @@ public class CommentPostServiceImpl implements CommentPostService {
 
     @Override
     public List<Comment> getCommentsByPostId(Long postId) {
-
-        List<Comment> comments = commentRepository.findByPostId(postId);
+        List<Comment> comments = findCommentsByPostId(postId);
         return comments;
     }
 
     @Override
     public void deleteCommentsByPostId(Long postId) {
-        System.out.println(postId);
-        List<Comment> comments = commentRepository.findByPostId(postId);
-        System.out.println("=======================================");
-        System.out.println("=======================================");
-        System.out.println("=======================================");
-        System.out.println(comments);
-        System.out.println("=======================================");
-        System.out.println("=======================================");
-        System.out.println("=======================================");
-
+        List<Comment> comments = findCommentsByPostId(postId);
         if(comments.size() > 0)
             commentRepository.deleteAll(comments);
+    }
+
+    private List<Comment> findCommentsByPostId(Long postId) {
+        return commentRepository.findByPostId(postId);
     }
 }

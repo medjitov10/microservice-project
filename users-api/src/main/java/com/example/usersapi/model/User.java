@@ -11,11 +11,6 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 public class User {
-
-    @JsonIdentityInfo(
-            generator = ObjectIdGenerators.PropertyGenerator.class,
-            property = "id")
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -33,9 +28,6 @@ public class User {
 
     @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
     private Profile profile;
-
-//    (cascade = {CascadeType.DETACH,
-//            CascadeType.MERGE, CascadeType.REFRESH})
 
     @ManyToMany
     @JoinTable(
