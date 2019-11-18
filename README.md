@@ -30,7 +30,7 @@ We held an initial, sprint planning meeting in which we discussed the needed del
 10. Draw.io - ERD diagram
 [google drive] (https://drive.google.com/file/d/12HwpUj9DMQfros2TJW2yWE1vU4oTVTQv/view?usp=sharing)
 11. Pivotal Tracker – user stories
-[Pivotal Tracker] (https://www.pivotaltracker.com/n/projects/2407543)
+[Pivotal Tracker] (https://www.pivotaltracker.com/n/projects/2416902)
 12. Postman – test / verify API calls
 13. IntelliJ
 14. Docker
