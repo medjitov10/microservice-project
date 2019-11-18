@@ -8,7 +8,7 @@ MAINTAINER David <david8015@yahoo.com>
 VOLUME /tmp
 
 # Make port 80 available to the world outside this container:
-EXPOSE 8080
+EXPOSE 8083
 
 # The application's JAR file:
 ARG JAR_FILE=target/posts-api-0.0.1-SNAPSHOT.jar
