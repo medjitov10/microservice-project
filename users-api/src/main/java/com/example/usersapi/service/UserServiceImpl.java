@@ -73,13 +73,6 @@ public class UserServiceImpl implements UserService {
             profile.setId(user.getProfile().getId());
         }
         profile.setUser(user);
-        System.out.println("================");
-        System.out.println("================");
-        System.out.println("================");
-        System.out.println("================");
-        System.out.println("================");
-        System.out.println(profile.getId());
-        System.out.println("================");
         profileRepository.save(profile);
         return user.getProfile();
     }
