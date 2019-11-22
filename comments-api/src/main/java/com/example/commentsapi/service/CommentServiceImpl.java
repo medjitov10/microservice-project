@@ -2,6 +2,7 @@ package com.example.commentsapi.service;
 
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.model.User;
+import com.example.commentsapi.mq.Sender;
 import com.example.commentsapi.repository.CommentRepository;
 import com.example.commentsapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,11 +19,16 @@ public class CommentServiceImpl implements CommentService {
     @Autowired
     CommentRepository commentRepository;
 
+    @Autowired
+    Sender sender;
+
     @Override
-    public Comment createComment(Long postId, String username, Comment comment) {
+    public Comment createComment(Long postId, String username, Comment comment) throws Exception {
         comment.setUsername(username);
         comment.setPostId(postId);
-        return commentRepository.save(comment);
+        commentRepository.save(comment);
+        sender.send(comment);
+        return comment;
     }
 
     @Override

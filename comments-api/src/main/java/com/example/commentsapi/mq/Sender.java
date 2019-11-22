@@ -23,7 +23,7 @@ public class Sender {
 
 
         System.out.println("Sending message...");
-        rabbitTemplate.convertAndSend(queue.getName(), commentString);
+        rabbitTemplate.convertAndSend(queue.getName(), comment);
         System.out.println("Message sent: " + comment + " on q: " + queue.getName());
     }
 }

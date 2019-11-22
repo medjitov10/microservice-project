@@ -14,9 +14,6 @@ import java.util.List;
 public class    CommentController {
 
     @Autowired
-    Sender sender;
-
-    @Autowired
     CommentService commentService;
 
     @Autowired
@@ -25,7 +22,6 @@ public class    CommentController {
     @PostMapping("/{postId}")
     public Comment createComment (@PathVariable Long postId, @RequestHeader("username") String username, @RequestBody Comment comment) throws Exception{
         Comment comment1 = commentService.createComment(postId, username, comment);
-        sender.send(comment1);
         return comment1;
     }
 

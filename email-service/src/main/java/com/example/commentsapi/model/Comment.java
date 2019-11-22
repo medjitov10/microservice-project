@@ -1,35 +1,39 @@
 package com.example.commentsapi.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.ga.emailservice.bean.CommentDeserializer;
 
-import com.example.commentsapi.serializer.CommentSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-
-import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name="comments")
-@JsonSerialize(using = CommentSerializer.class)
+@JsonDeserialize(using = CommentDeserializer.class)
 public class Comment implements Serializable {
 
-    @Transient
     private static final long serialVersionUID = 4L;
 
-    @Id
-    @Column
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(nullable = false)
     private String text;
 
-    @Column
     private Long postId;
 
-    @Column
     private String username;
 
+//    private User user;
+//
+//    public User getUser() {
+//        return user;
+//    }
+//
+//    public void setUser(User user) {
+//        this.user = user;
+//    }
+
     public Comment() {}
+
+    public Comment(String text, String username) {
+        this.text = text;
+        this.username = username;
+    }
 
     public long getId() {
         return id;
@@ -61,5 +65,10 @@ public class Comment implements Serializable {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    @Override
+    public String toString(){
+        return "Comment" + text;
     }
 }

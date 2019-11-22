@@ -16,6 +16,9 @@ public class MessageCommentController {
     @GetMapping("/send/{msg}")
     public String send(@PathVariable String msg) throws Exception{
         Comment comment = new Comment();
+        comment.setPostId(1L);
+        comment.setUsername("qweqwe");
+        comment.setId(1L);
         comment.setText(msg);
         sender.send(comment);
         return "message sent";
