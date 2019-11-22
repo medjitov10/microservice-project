@@ -1,6 +1,7 @@
 package com.example.commentsapi.controller;
 
 import com.example.commentsapi.model.Comment;
+import com.example.commentsapi.mq.Sender;
 import com.example.commentsapi.service.CommentPostService;
 import com.example.commentsapi.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,10 @@ import java.util.List;
 
 @RestController
 public class    CommentController {
+
+    @Autowired
+    Sender sender;
+
     @Autowired
     CommentService commentService;
 
@@ -18,8 +23,10 @@ public class    CommentController {
     CommentPostService commentPostService;
 
     @PostMapping("/{postId}")
-    public Comment createComment(@PathVariable Long postId, @RequestHeader("username") String username, @RequestBody Comment comment) {
-        return commentService.createComment(postId, username, comment);
+    public Comment createComment (@PathVariable Long postId, @RequestHeader("username") String username, @RequestBody Comment comment) throws Exception{
+        Comment comment1 = commentService.createComment(postId, username, comment);
+        sender.send(comment1);
+        return comment1;
     }
 
     @DeleteMapping("/{commentId}")

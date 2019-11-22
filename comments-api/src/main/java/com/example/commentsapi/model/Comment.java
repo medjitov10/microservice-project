@@ -5,11 +5,12 @@ import com.example.commentsapi.serializer.CommentSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name="comments")
 @JsonSerialize(using = CommentSerializer.class)
-public class Comment {
+public class Comment implements Serializable {
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -14,8 +14,6 @@ public class PostServiceImpl implements PostService {
     @Autowired
     PostRepository postRepository;
 
-    @Autowired
-    UserRepository userRepository;
 
     @Autowired
     CommentService commentService;
