@@ -45,6 +45,7 @@ public class CommentServiceImpl implements CommentService {
         email.setCommentText(comment.getText());
         email.setCommentUsername(comment.getUsername());
         email.setAuthorUsername(post.getUser().getUsername());
+
         sender.send(email);
     }
 
