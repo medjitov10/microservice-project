@@ -9,4 +9,6 @@ public interface PostService {
     Iterable<Post> findAll();
     public void deletePost(Long postId);
     public List<Post> getPostByUser(String username);
+
+    Post getPostByPostId(Long postId);
 }

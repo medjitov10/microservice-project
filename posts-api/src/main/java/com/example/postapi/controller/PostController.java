@@ -38,8 +38,13 @@ public class PostController {
     @GetMapping("/user")
     public List<Post> getPostByUser(@RequestHeader("username") String username){
         return postService.getPostByUser(username);
-
     }
+
+    @GetMapping("/{postId}")
+    public Post getPostByPostId(@PathVariable Long postId) {
+        return postService.getPostByPostId(postId);
+    }
+
 
     @GetMapping("/{postId}/comment")
     public List<Comment> getCommentsByPostId(@PathVariable Long postId) {

@@ -1,9 +1,7 @@
 package com.example.postapi.service;
 
 import com.example.postapi.model.Post;
-import com.example.postapi.model.User;
 import com.example.postapi.repository.PostRepository;
-import com.example.postapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -40,5 +38,11 @@ public class PostServiceImpl implements PostService {
     @Override
     public List<Post> getPostByUser(String username) {
         return postRepository.findByUsername(username);
+    }
+
+    @Override
+    public Post getPostByPostId(Long postId) {
+        Post post = postRepository.findById(postId).orElse(null);
+        return post;
     }
 }

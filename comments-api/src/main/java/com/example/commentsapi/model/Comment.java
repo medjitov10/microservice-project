@@ -12,9 +12,6 @@ import java.io.Serializable;
 @JsonSerialize(using = CommentSerializer.class)
 public class Comment implements Serializable {
 
-    @Transient
-    private static final long serialVersionUID = 4L;
-
     @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -57,4 +57,14 @@ public class Post {
     public void setUsername(String username) {
         this.username = username;
     }
+
+    @Override
+    public String toString() {
+        return "Post{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", username='" + username + '\'' +
+                '}';
+    }
 }
