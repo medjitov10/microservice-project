@@ -17,9 +17,17 @@ import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * UserServiceImpl to maintain a separation of concerns between our layers
+ * This class will house all the business logic to format and return data from CRUD operations
+ */
+
 @Service
 public class UserServiceImpl implements UserService {
 
+    /**
+     * Autowired - allows Spring to resolve and inject the collaborating bean into this class.
+     */
     @Autowired
     private UserRepository userRepository;
 
@@ -32,16 +40,28 @@ public class UserServiceImpl implements UserService {
     @Autowired
     JwtUtil jwtUtil;
 
+    /**
+     *Create a new bean of type PasswordEncoder to encode the user's password
+     */
     @Bean
     public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();
     }
-
+    /**
+     * This method gets all users and saves them into a list of users
+     * @return a datatype that implements the Iterable interface. In this case a list of users.
+     */
     @Override
-    public List<User> listUsers() {
-        return null;
+    public Iterable<User> listUsers() {
+        return userRepository.findAll();
     }
 
+    /**
+     * This method signs up a new user
+     * The password is encoded before saving to database
+     * The user's role is added (defaulted to user)
+     * @return null.
+     */
     @Override
     public List<String> signUp(User user) {
         user.setPassword(encoder().encode(user.getPassword()));
@@ -56,6 +76,11 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    /**
+     * This method logs in a registered user so that they can interact with our website
+     * @param user takes in the user's information to be authenticated
+     * @return a list of null.
+     */
     @Override
     public List<String> logIn(User user) {
         User savedUser = userRepository.findByUsername(user.getUsername());
@@ -66,6 +91,12 @@ public class UserServiceImpl implements UserService {
     }
 
 
+    /**
+     * This method is used to create a user profile
+     * @param profile take in profile information from user
+     * @param username used to retrieve the user
+     * @return Profile created.
+     */
     @Override
     public Profile createProfile(Profile profile, String username) {
         User user = userRepository.findByUsername(username);
@@ -77,12 +108,23 @@ public class UserServiceImpl implements UserService {
         return user.getProfile();
     }
 
+    /**
+     * This method is used to get a user's profile
+     * @param username used to used to retrieve the user
+     * @return user Profile.
+     */
     @Override
     public Profile getProfile(String username) {
         User user = userRepository.findByUsername(username);
         return user.getProfile();
     }
 
+    /**
+     * This method is used to update a user profile
+     * @param profile to take in profile information that the user wants to change
+     * @param tokenHeader used to authenticate the user and retrieve user profile
+     * @return updated Profile.
+     */
     @Override
     public Profile updateProfile(Profile profile, String tokenHeader) {
         return null;
