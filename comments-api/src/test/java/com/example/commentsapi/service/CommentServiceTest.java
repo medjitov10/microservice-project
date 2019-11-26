@@ -1,5 +1,6 @@
 package com.example.commentsapi.service;
 
+import com.example.commentsapi.exception.EntityNotFoundException;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.model.EmailModel;
 import com.example.commentsapi.model.Post;
@@ -71,24 +72,17 @@ public class CommentServiceTest {
     }
 
     @Test
-    public void deleteComment_CommentService_Success() {
+    public void deleteComment_CommentService_Success() throws Exception {
         Mockito.doNothing().when(commentRepository).deleteById(any());
         assertEquals(commentService.deleteComment(1L), HttpStatus.OK);
     }
 
     @Test
-    public void getCommentsByUser_CommentService_Success() {
+    public void getCommentsByUser_CommentService_Success() throws EntityNotFoundException {
         List<Comment> comments = Arrays.asList(comment);
         when(commentRepository.findByUsername(any())).thenReturn(comments);
         assertEquals(commentService.getCommentsByUser(any()), comments);
     }
-//
-//        @Override
-//        public List<Comment> getCommentsByUser(String username) {
-//            return commentRepository.findByUsername(username);
-//        }
-//    }
-
 
     @Before
     public void initMocks() {

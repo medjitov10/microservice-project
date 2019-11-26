@@ -1,5 +1,6 @@
 package com.example.commentsapi.controller;
 
+import com.example.commentsapi.exception.EntityNotFoundException;
 import com.example.commentsapi.model.Comment;
 import com.example.commentsapi.mq.Sender;
 import com.example.commentsapi.service.CommentPostService;
@@ -11,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class    CommentController {
+public class CommentController {
 
     @Autowired
     CommentService commentService;
@@ -26,22 +27,22 @@ public class    CommentController {
     }
 
     @DeleteMapping("/{commentId}")
-    public HttpStatus deleteComment(@PathVariable Long commentId) {
+    public HttpStatus deleteComment(@PathVariable Long commentId) throws Exception {
         return commentService.deleteComment(commentId);
     }
 
     @GetMapping
-    public List<Comment> getCommentsByUser(@RequestHeader("username") String username) {
+    public List<Comment> getCommentsByUser(@RequestHeader("username") String username) throws EntityNotFoundException {
         return commentService.getCommentsByUser(username);
     }
 
     @GetMapping("/{postId}/comment")
-    public List<Comment> getCommentsByPostId(@PathVariable Long postId) {
+    public List<Comment> getCommentsByPostId(@PathVariable Long postId) throws EntityNotFoundException {
         return commentPostService.getCommentsByPostId(postId);
     }
 
     @DeleteMapping("/{postId}/comment")
-    public void deleteCommentsByPostId(@PathVariable Long postId) {
+    public void deleteCommentsByPostId(@PathVariable Long postId) throws EntityNotFoundException {
         commentPostService.deleteCommentsByPostId(postId);
     }
 }
