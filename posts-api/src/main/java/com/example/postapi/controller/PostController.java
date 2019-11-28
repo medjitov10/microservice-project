@@ -2,7 +2,7 @@ package com.example.postapi.controller;
 
 import com.example.postapi.model.Comment;
 import com.example.postapi.model.Post;
-import com.example.postapi.service.CommentService;
+import com.example.postapi.feignClientService.CommentService;
 import com.example.postapi.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

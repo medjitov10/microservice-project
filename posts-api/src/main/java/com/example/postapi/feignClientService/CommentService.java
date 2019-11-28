@@ -1,4 +1,4 @@
-package com.example.postapi.service;
+package com.example.postapi.feignClientService;
 
 import com.example.postapi.model.Comment;
 import org.springframework.cloud.openfeign.FeignClient;

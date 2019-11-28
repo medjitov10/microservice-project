@@ -1,5 +1,6 @@
 package com.example.postapi.service;
 
+import com.example.postapi.feignClientService.CommentService;
 import com.example.postapi.model.Post;
 import com.example.postapi.repository.PostRepository;
 import org.springframework.beans.factory.annotation.Autowired;
