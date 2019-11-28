@@ -18,7 +18,7 @@ public class SwaggerConfig {
     @Bean
     public Docket api() throws IOException, XmlPullParserException {
         MavenXpp3Reader reader = new MavenXpp3Reader();
-//        Model model = reader.read(new FileReader("pom.xml"));
+
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.commentsapi.controller"))
@@ -26,16 +26,3 @@ public class SwaggerConfig {
                 .build().apiInfo(new ApiInfo("Comments-Api Documentation", "Comments automatically generated", "v2", null, new Contact("david", "", "david.hernandez8015@gmail.com"), null, null));
     }
 }
-//@Configuration
-//public class SwaggerConfig {
-//    @Bean
-//    public Docket api() throws IOException, XmlPullParserException {
-//        MavenXpp3Reader reader = new MavenXpp3Reader();
-////        Model model = reader.read(new FileReader("pom.xml"));
-//        return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
-//                .apis(RequestHandlerSelectors.basePackage("com.example.usersapi.controller"))
-//                .paths(PathSelectors.any())
-//                .build().apiInfo(new ApiInfo("Users-Api Documentation", "Users automatically generated", "v2", null, new Contact("david", "", "david.hernandez8015@gmail.com"), null, null));
-//    }
-//}

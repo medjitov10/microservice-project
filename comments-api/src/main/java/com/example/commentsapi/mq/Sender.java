@@ -18,8 +18,6 @@ public class Sender {
     public void send(EmailModel email) throws Exception{
         ObjectMapper mapper = new ObjectMapper();
         String commentString = mapper.writeValueAsString(email);
-
-
         System.out.println("Sending message...");
         rabbitTemplate.convertAndSend(queue.getName(), commentString);
         System.out.println("Message sent: " + email + " on q: " + queue.getName());

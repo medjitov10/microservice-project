@@ -17,6 +17,7 @@ import java.util.List;
 
 @Service
 public class CommentServiceImpl implements CommentService {
+
     @Autowired
     UserRepository userRepository;
 
@@ -36,11 +37,11 @@ public class CommentServiceImpl implements CommentService {
         comment.setUsername(username);
         comment.setPostId(postId);
         commentRepository.save(comment);
-//      sendEmailHanlder(comment);
+        sendEmailHanlder(comment);
         return comment;
     }
 
-    private void sendEmailHanlder(Comment comment) throws Exception {
+    public void sendEmailHanlder(Comment comment) throws Exception {
         Post post = postService.getPostByPostId(comment.getPostId());
         User postUser = userRepository.getUserByUsername(post.getUser().getUsername());
         EmailModel email = new EmailModel();
@@ -59,7 +60,6 @@ public class CommentServiceImpl implements CommentService {
         } catch (Exception e) {
             throw new Exception("Unable to delete comment with id: "+ commentId + ".");
         }
-
         return HttpStatus.OK;
     }
 
@@ -70,6 +70,5 @@ public class CommentServiceImpl implements CommentService {
         } catch (Exception e) {
             throw new EntityNotFoundException("Invalid username");
         }
-
     }
 }
