@@ -54,7 +54,6 @@ public interface UserService {
      * @param tokenHeader used to authenticate the user
      * @return updated Profile.
      */
-    public Profile updateProfile(Profile profile, String tokenHeader);
 
 //    public User searchById(long id);
 //

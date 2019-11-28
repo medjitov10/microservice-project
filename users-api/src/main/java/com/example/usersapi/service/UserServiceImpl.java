@@ -119,15 +119,4 @@ public class UserServiceImpl implements UserService {
         return user.getProfile();
     }
 
-    /**
-     * This method is used to update a user profile
-     * @param profile to take in profile information that the user wants to change
-     * @param tokenHeader used to authenticate the user and retrieve user profile
-     * @return updated Profile.
-     */
-    @Override
-    public Profile updateProfile(Profile profile, String tokenHeader) {
-        return null;
-    }
-
 }
