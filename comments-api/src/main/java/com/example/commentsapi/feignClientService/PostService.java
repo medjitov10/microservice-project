@@ -1,8 +1,7 @@
-package com.example.commentsapi.service;
+package com.example.commentsapi.feignClientService;
 
-import com.example.commentsapi.model.Post;
+import com.example.commentsapi.bean.Post;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 

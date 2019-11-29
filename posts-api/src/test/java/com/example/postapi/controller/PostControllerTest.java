@@ -1,8 +1,8 @@
 package com.example.postapi.controller;
 
-import com.example.postapi.model.Comment;
+import com.example.postapi.bean.Comment;
 import com.example.postapi.model.Post;
-import com.example.postapi.model.User;
+import com.example.postapi.bean.User;
 import com.example.postapi.feignClientService.CommentService;
 import com.example.postapi.service.PostService;
 import com.fasterxml.jackson.core.JsonProcessingException;

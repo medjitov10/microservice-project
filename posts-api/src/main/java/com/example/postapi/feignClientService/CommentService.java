@@ -1,6 +1,6 @@
 package com.example.postapi.feignClientService;
 
-import com.example.postapi.model.Comment;
+import com.example.postapi.bean.Comment;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

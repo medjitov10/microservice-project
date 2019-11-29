@@ -1,4 +1,4 @@
-package com.example.postapi.model;
+package com.example.postapi.bean;
 
 import org.springframework.stereotype.Service;
 

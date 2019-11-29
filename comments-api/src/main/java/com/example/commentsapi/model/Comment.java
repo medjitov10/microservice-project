@@ -5,6 +5,7 @@ import com.example.commentsapi.serializer.CommentSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 @Entity
@@ -17,12 +18,14 @@ public class Comment implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @NotBlank(message = "Test cannot be blank")
     @Column(nullable = false)
     private String text;
 
     @Column
     private Long postId;
 
+    @NotBlank(message = "Username cannot be blank")
     @Column
     private String username;
 

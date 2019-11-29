@@ -1,5 +1,6 @@
 package com.example.postapi.service;
 
+import com.example.postapi.exception.EntityNotFoundException;
 import com.example.postapi.feignClientService.CommentService;
 import com.example.postapi.model.Post;
 import com.example.postapi.repository.PostRepository;
@@ -28,11 +29,13 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public void deletePost(Long postId){
+    public void deletePost(Long postId) throws EntityNotFoundException {
         Post post = postRepository.findById(postId).orElse(null);
         if(post != null) {
             commentService.deleteCommentsByPostId(postId);
             postRepository.delete(post);
+        } else {
+            throw new EntityNotFoundException("Post not found");
         }
     }
 
@@ -42,8 +45,10 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
-    public Post getPostByPostId(Long postId) {
+    public Post getPostByPostId(Long postId) throws EntityNotFoundException {
         Post post = postRepository.findById(postId).orElse(null);
+        if (post == null)
+            throw new EntityNotFoundException("Post not found");
         return post;
     }
 }

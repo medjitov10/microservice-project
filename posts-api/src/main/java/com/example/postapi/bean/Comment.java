@@ -1,4 +1,4 @@
-package com.example.postapi.model;
+package com.example.postapi.bean;
 
 import com.example.postapi.serializer.CommentSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;

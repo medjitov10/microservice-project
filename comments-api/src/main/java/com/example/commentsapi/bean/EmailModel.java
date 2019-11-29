@@ -1,4 +1,4 @@
-package com.example.commentsapi.model;
+package com.example.commentsapi.bean;
 
 
 public class EmailModel {
@@ -51,4 +51,11 @@ public class EmailModel {
     public EmailModel() {
     }
 
+    public EmailModel(String authorEmail, String postTitle, String commentText, String authorUsername, String commentUsername) {
+        this.authorEmail = authorEmail;
+        this.postTitle = postTitle;
+        this.commentText = commentText;
+        this.authorUsername = authorUsername;
+        CommentUsername = commentUsername;
+    }
 }

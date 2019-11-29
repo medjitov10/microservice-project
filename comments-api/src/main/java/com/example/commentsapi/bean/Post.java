@@ -1,4 +1,4 @@
-package com.example.commentsapi.model;
+package com.example.commentsapi.bean;
 
 public class Post {
     private Long id;

@@ -1,7 +1,8 @@
 package com.example.postapi.service;
 
+import com.example.postapi.exception.EntityNotFoundException;
 import com.example.postapi.feignClientService.CommentService;
-import com.example.postapi.model.Comment;
+import com.example.postapi.bean.Comment;
 import com.example.postapi.model.Post;
 import com.example.postapi.repository.PostRepository;
 import org.junit.Before;
@@ -51,7 +52,7 @@ public class PostServiceImplTest {
     }
 
     @Test
-    public void deletePost_PostService_Success() {
+    public void deletePost_PostService_Success() throws EntityNotFoundException {
         List<Comment> comments = null;
         PostService postService = mock(PostService.class);
         Optional<Post> optionalPost = Optional.of(post);
@@ -70,7 +71,7 @@ public class PostServiceImplTest {
     }
 
     @Test
-    public void getPostByPostId_PostService_Success() {
+    public void getPostByPostId_PostService_Success() throws EntityNotFoundException {
         Optional<Post> optionalPost = Optional.of(post);
         when(postRepository.findById(any())).thenReturn(optionalPost);
         assertEquals(postService.getPostByPostId(any()), post);

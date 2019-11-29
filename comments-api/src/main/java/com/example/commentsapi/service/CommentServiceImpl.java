@@ -2,10 +2,11 @@ package com.example.commentsapi.service;
 
 import com.example.commentsapi.exception.EntityNotFoundException;
 import com.example.commentsapi.exception.InvalidInputException;
+import com.example.commentsapi.feignClientService.PostService;
 import com.example.commentsapi.model.Comment;
-import com.example.commentsapi.model.EmailModel;
-import com.example.commentsapi.model.Post;
-import com.example.commentsapi.model.User;
+import com.example.commentsapi.bean.EmailModel;
+import com.example.commentsapi.bean.Post;
+import com.example.commentsapi.bean.User;
 import com.example.commentsapi.mq.Sender;
 import com.example.commentsapi.repository.CommentRepository;
 import com.example.commentsapi.repository.UserRepository;
@@ -37,19 +38,17 @@ public class CommentServiceImpl implements CommentService {
         comment.setUsername(username);
         comment.setPostId(postId);
         commentRepository.save(comment);
-        sendEmailHanlder(comment);
+        sendEmailHandler(comment);
         return comment;
     }
 
-    public void sendEmailHanlder(Comment comment) throws Exception {
+    public void sendEmailHandler(Comment comment) throws Exception {
         Post post = postService.getPostByPostId(comment.getPostId());
         User postUser = userRepository.getUserByUsername(post.getUser().getUsername());
-        EmailModel email = new EmailModel();
-        email.setAuthorEmail(postUser.getEmail());
-        email.setPostTitle(post.getTitle());
-        email.setCommentText(comment.getText());
-        email.setCommentUsername(comment.getUsername());
-        email.setAuthorUsername(post.getUser().getUsername());
+        EmailModel email = new EmailModel(
+                postUser.getEmail(), post.getTitle(), comment.getText(),
+                comment.getUsername(), post.getUser().getUsername()
+        );
         sender.send(email);
     }
 

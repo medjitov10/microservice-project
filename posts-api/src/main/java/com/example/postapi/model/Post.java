@@ -4,6 +4,7 @@ import com.example.postapi.serializer.PostSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name="posts")
@@ -14,13 +15,16 @@ public class Post {
     @Column(name="id")
     private Long id;
 
+    @NotBlank(message = "Title cannot be blank")
     @Column(nullable = false)
     private String title;
 
-    @Column
+    @NotBlank(message = "Description cannot be blank")
+    @Column(nullable = false)
     private String description;
 
-    @Column
+    @NotBlank(message = "Username cannot be blank")
+    @Column(nullable = false)
     private String username;
 
     public Post() {

@@ -1,6 +1,7 @@
 package com.example.postapi.controller;
 
-import com.example.postapi.model.Comment;
+import com.example.postapi.exception.EntityNotFoundException;
+import com.example.postapi.bean.Comment;
 import com.example.postapi.model.Post;
 import com.example.postapi.feignClientService.CommentService;
 import com.example.postapi.service.PostService;
@@ -30,7 +31,7 @@ public class PostController {
     }
 
     @DeleteMapping("/{postId}")
-    public HttpStatus deletePost(@PathVariable Long postId){
+    public HttpStatus deletePost(@PathVariable Long postId) throws EntityNotFoundException {
         postService.deletePost(postId);
         return HttpStatus.OK;
     }
@@ -41,7 +42,7 @@ public class PostController {
     }
 
     @GetMapping("/{postId}")
-    public Post getPostByPostId(@PathVariable Long postId) {
+    public Post getPostByPostId(@PathVariable Long postId) throws EntityNotFoundException {
         return postService.getPostByPostId(postId);
     }
 

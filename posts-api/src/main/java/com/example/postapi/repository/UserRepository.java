@@ -1,6 +1,6 @@
 package com.example.postapi.repository;
 
-import com.example.postapi.model.User;
+import com.example.postapi.bean.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;

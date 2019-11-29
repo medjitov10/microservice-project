@@ -1,10 +1,11 @@
 package com.example.commentsapi.service;
 
 import com.example.commentsapi.exception.EntityNotFoundException;
+import com.example.commentsapi.feignClientService.PostService;
 import com.example.commentsapi.model.Comment;
-import com.example.commentsapi.model.EmailModel;
-import com.example.commentsapi.model.Post;
-import com.example.commentsapi.model.User;
+import com.example.commentsapi.bean.EmailModel;
+import com.example.commentsapi.bean.Post;
+import com.example.commentsapi.bean.User;
 import com.example.commentsapi.mq.Sender;
 import com.example.commentsapi.repository.CommentRepository;
 import com.example.commentsapi.repository.UserRepository;
@@ -14,13 +15,9 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
