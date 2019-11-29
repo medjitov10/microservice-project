@@ -1,6 +1,7 @@
 package com.example.usersapi.service;
 
 import com.example.usersapi.config.JwtUtil;
+import com.example.usersapi.exception.EntityNotFoundException;
 import com.example.usersapi.model.Profile;
 import com.example.usersapi.model.Role;
 import com.example.usersapi.model.User;
@@ -18,6 +19,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 
+import javax.security.auth.login.CredentialException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -73,7 +75,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void signUp_UserService_Succes() {
+    public void signUp_UserService_Succes() throws Exception {
 //        when(encoder.encode(any())).thenReturn("123123");
         Optional<Role> roleOptional = Optional.of(role);
         when(roleRepository.findById(any())).thenReturn(roleOptional);
@@ -84,7 +86,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void logIn_UserService_Controller() {
+    public void logIn_UserService_Controller() throws CredentialException {
         when(userRepository.findByUsername(any())).thenReturn(user);
         when(jwtUtil.generateToken(any())).thenReturn("123456");
 
@@ -101,7 +103,7 @@ public class UserServiceTest {
 //    }
 //
     @Test
-    public void createProfile_userService_Success() {
+    public void createProfile_userService_Success() throws EntityNotFoundException {
         when(userRepository.findByUsername(any())).thenReturn(user);
         when(profileRepository.save(profile)).thenReturn(profile);
         assertNotNull(userService.createProfile(profile, "osman"));

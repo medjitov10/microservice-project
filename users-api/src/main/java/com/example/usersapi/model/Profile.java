@@ -2,6 +2,7 @@ package com.example.usersapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 /**
  * Profile entity to represent profiles in our data model. A Profile saves a user's additionalEmail, address and mobile fields.

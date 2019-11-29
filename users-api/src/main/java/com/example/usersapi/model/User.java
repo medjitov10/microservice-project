@@ -3,6 +3,7 @@ package com.example.usersapi.model;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,12 +30,14 @@ public class User {
     /**
      * @param email - make it unique and un-nullable
      */
+    @NotBlank(message = "Email cannot be blank")
     @Column(name = "email", unique = true, nullable = false)
     private String email;
 
     /**
      * @param password make password read only and un-nullable
      */
+    @NotBlank(message = "Password cannot be blank")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @Column(name = "password", nullable = false)
     private String password;
@@ -42,6 +45,7 @@ public class User {
     /**
      * @param username - unique and un-nullable
      */
+    @NotBlank(message = "Username cannot be blank")
     @Column(name = "username", unique = true, nullable = false)
     private String username;
 

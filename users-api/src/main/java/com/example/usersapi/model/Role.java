@@ -1,6 +1,7 @@
 package com.example.usersapi.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import java.util.List;
 
 
@@ -28,6 +29,7 @@ public class Role {
     /**
      * @param name - make it unique and un-nullable
      */
+    @NotBlank(message = "Username cannot be blank")
     @Column(unique = true, nullable = false)
     private String name;
 
