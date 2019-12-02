@@ -10,6 +10,7 @@ import com.example.usersapi.repository.ProfileRepository;
 import com.example.usersapi.repository.RoleRepository;
 import com.example.usersapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -50,6 +51,11 @@ public class UserServiceImpl implements UserService {
     public PasswordEncoder encoder() {
         return new BCryptPasswordEncoder();
     }
+
+    @Autowired
+    @Qualifier("encoder")
+    PasswordEncoder bCryptPasswordEncoder;
+
     /**
      * This method gets all users and saves them into a list of users
      * @return a datatype that implements the Iterable interface. In this case a list of users.
@@ -95,7 +101,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<String> logIn(User user) throws CredentialException {
         User savedUser = userRepository.findByUsername(user.getUsername());
-        if( savedUser != null && encoder().matches(user.getPassword(), savedUser.getPassword())) {
+        if( savedUser != null && bCryptPasswordEncoder.matches(user.getPassword(), savedUser.getPassword())) {
             return Arrays.asList( jwtUtil.generateToken(user.getUsername()), savedUser.getUsername());
         } else {
             throw new CredentialException("Invalid email or password");
@@ -132,5 +138,4 @@ public class UserServiceImpl implements UserService {
         User user = userRepository.findByUsername(username);
         return user.getProfile();
     }
-
 }

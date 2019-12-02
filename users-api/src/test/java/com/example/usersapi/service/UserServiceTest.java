@@ -41,7 +41,7 @@ public class UserServiceTest {
     UserServiceImpl userService;
     @Mock
     JwtUtil jwtUtil;
-    @InjectMocks
+    @Mock
     BCryptPasswordEncoder encoder;
     @Mock
     RoleRepository roleRepository;
@@ -49,6 +49,8 @@ public class UserServiceTest {
     ProfileRepository profileRepository;
     @Mock
     UserRepository userRepository;
+    @Mock
+    PasswordEncoder bCryptPasswordEncoder;
     @Before
     public void initMocks() {
         MockitoAnnotations.initMocks(this);
@@ -59,6 +61,7 @@ public class UserServiceTest {
         user.setId(1L);
         user.setUsername("osman");
         user.setPassword("$2a123123");
+        user.setEmail("test@email.com");
         user.setProfile(profile);
     }
 
@@ -90,18 +93,11 @@ public class UserServiceTest {
         when(userRepository.findByUsername(any())).thenReturn(user);
         when(jwtUtil.generateToken(any())).thenReturn("123456");
 
+        when(bCryptPasswordEncoder.matches(any(), any())).thenReturn(true);
         List<String> actualToken = userService.logIn(user);
         assertNotNull(actualToken);
     }
-//    @Override
-//    public List<String> logIn(User user) {
-//        User savedUser = userRepository.findByUsername(user.getUsername());
-//        if( savedUser != null && encoder().matches(user.getPassword(), savedUser.getPassword())) {
-//            return Arrays.asList( jwtUtil.generateToken(user.getUsername()), savedUser.getUsername());
-//        }
-//        return null;
-//    }
-//
+
     @Test
     public void createProfile_userService_Success() throws EntityNotFoundException {
         when(userRepository.findByUsername(any())).thenReturn(user);
