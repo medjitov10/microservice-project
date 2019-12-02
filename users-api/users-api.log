@@ -133,3 +133,15 @@
 2019-12-02 11:55:31.348  INFO 3354 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-12-02 12:00:31.363  INFO 3354 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-12-02 12:05:31.381  INFO 3354 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 12:07:15.935  INFO 3354 --- [Thread-20] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS with eureka with status DOWN
+2019-12-02 12:07:15.935  WARN 3354 --- [Thread-20] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575306435935, current=DOWN, previous=UP]
+2019-12-02 12:07:15.938  INFO 3354 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/davids-mbp-2:users:8081: registering service...
+2019-12-02 12:07:15.979  INFO 3354 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/davids-mbp-2:users:8081 - registration status: 204
+2019-12-02 12:07:16.051  INFO 3354 --- [Thread-20] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 12:07:16.089  INFO 3354 --- [Thread-20] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 12:07:16.154  INFO 3354 --- [Thread-20] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-12-02 12:07:19.160  INFO 3354 --- [Thread-20] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-12-02 12:07:19.175  INFO 3354 --- [Thread-20] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/davids-mbp-2:users:8081 - deregister  status: 200
+2019-12-02 12:07:19.246  INFO 3354 --- [Thread-20] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-12-02 12:07:19.275  INFO 3354 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 12:07:19.313  INFO 3354 --- [Thread-20] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
