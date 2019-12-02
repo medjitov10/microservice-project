@@ -1,0 +1,200 @@
+2019-12-02 11:02:23.518  INFO 99235 --- [main] c.e.apigateway.ZuulGatewayApplication    : The following profiles are active: local
+2019-12-02 11:02:24.301  INFO 99235 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 11:02:24.317  INFO 99235 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 repository interfaces.
+2019-12-02 11:02:24.416  WARN 99235 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-02 11:02:24.425  WARN 99235 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2019-12-02 11:02:24.639  INFO 99235 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=84d51f73-5869-33be-b6ef-e941d737e86a
+2019-12-02 11:02:24.742  INFO 99235 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5771fd3d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 11:02:24.846  INFO 99235 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$738c003a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 11:02:25.158  INFO 99235 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-02 11:02:25.174  INFO 99235 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-02 11:02:25.174  INFO 99235 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-02 11:02:25.261  INFO 99235 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-02 11:02:25.261  INFO 99235 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1727 ms
+2019-12-02 11:02:25.350  WARN 99235 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 11:02:25.350  INFO 99235 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 11:02:25.357  INFO 99235 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@21e45a6f
+2019-12-02 11:02:26.254  INFO 99235 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 11:02:26.315  INFO 99235 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 11:02:26.358  INFO 99235 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 11:02:26.411  INFO 99235 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 11:02:26.412  INFO 99235 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 11:02:26.528  INFO 99235 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 11:02:26.635  INFO 99235 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-02 11:02:26.648  INFO 99235 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-12-02 11:02:26.652  INFO 99235 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@56d822dc
+2019-12-02 11:02:26.759  INFO 99235 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 11:02:26.950  WARN 99235 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 11:02:27.089  INFO 99235 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-02 11:02:27.309  INFO 99235 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@22604c7e, org.springframework.security.web.context.SecurityContextPersistenceFilter@299eca90, org.springframework.security.web.header.HeaderWriterFilter@1607d391, org.springframework.web.filter.CorsFilter@4d8f2cfd, org.springframework.security.web.authentication.logout.LogoutFilter@d0a2c82, com.example.apigateway.config.JwtRequestFilter@14f060b8, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@aa8dce8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@76b05c0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@55c46ec1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d4502ca, org.springframework.security.web.session.SessionManagementFilter@1e95f584, org.springframework.security.web.access.ExceptionTranslationFilter@1eb6037d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4213bc3e]
+2019-12-02 11:02:27.326  WARN 99235 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 11:02:27.327  INFO 99235 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 11:02:27.460  INFO 99235 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 11:02:28.009  INFO 99235 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2019-12-02 11:02:28.076  INFO 99235 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 11:02:28.112  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-02 11:02:28.154  INFO 99235 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-02 11:02:28.155  INFO 99235 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-02 11:02:28.449  INFO 99235 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-02 11:02:28.449  INFO 99235 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-02 11:02:28.578  INFO 99235 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 11:02:28.591  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 11:02:28.591  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 11:02:28.591  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 11:02:28.591  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 11:02:28.591  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 11:02:28.592  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-02 11:02:28.592  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 11:02:28.658  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-02 11:02:28.660  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-02 11:02:28.668  INFO 99235 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-02 11:02:28.675  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575302548672 with initial instances count: 0
+2019-12-02 11:02:28.684  INFO 99235 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2019-12-02 11:02:28.690  INFO 99235 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575302548690, current=UP, previous=STARTING]
+2019-12-02 11:02:28.692  INFO 99235 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/davids-mbp-2:api-gateway: registering service...
+2019-12-02 11:02:28.700  INFO 99235 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-02 11:02:28.743  INFO 99235 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 11:02:28.774  INFO 99235 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 11:02:28.780  INFO 99235 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/davids-mbp-2:api-gateway - registration status: 204
+2019-12-02 11:02:28.913  INFO 99235 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2019-12-02 11:02:28.917  INFO 99235 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2019-12-02 11:02:28.920  INFO 99235 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2019-12-02 11:02:28.984  INFO 99235 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-02 11:02:28.985  INFO 99235 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2019-12-02 11:02:28.988  INFO 99235 --- [main] c.e.apigateway.ZuulGatewayApplication    : Started ZuulGatewayApplication in 6.422 seconds (JVM running for 7.039)
+2019-12-02 11:02:29.458  INFO 99235 --- [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-02 11:02:29.458  INFO 99235 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-02 11:02:29.467  INFO 99235 --- [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-12-02 11:02:58.664  INFO 99235 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 11:02:58.665  INFO 99235 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 11:02:58.665  INFO 99235 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 11:02:58.665  INFO 99235 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 11:02:58.665  INFO 99235 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 11:02:58.665  INFO 99235 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2019-12-02 11:02:58.666  INFO 99235 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 11:02:58.729  INFO 99235 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-02 11:07:28.607  INFO 99235 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 11:07:57.466  INFO 99235 --- [Thread-22] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application API-GATEWAY with eureka with status DOWN
+2019-12-02 11:07:57.468  WARN 99235 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575302877468, current=DOWN, previous=UP]
+2019-12-02 11:07:57.469  INFO 99235 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/davids-mbp-2:api-gateway: registering service...
+2019-12-02 11:07:57.483  INFO 99235 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/davids-mbp-2:api-gateway - registration status: 204
+2019-12-02 11:07:57.497  INFO 99235 --- [Thread-22] o.s.c.n.zuul.ZuulFilterInitializer       : Stopping filter initializer
+2019-12-02 11:07:57.511  INFO 99235 --- [Thread-22] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-02 11:07:57.527  INFO 99235 --- [Thread-22] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 11:07:57.538  INFO 99235 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-12-02 11:08:00.540  INFO 99235 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-12-02 11:08:00.541  WARN 99235 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2019-12-02 11:08:00.547  INFO 99235 --- [Thread-22] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/davids-mbp-2:api-gateway - deregister  status: 200
+2019-12-02 11:08:00.548  WARN 99235 --- [Thread-22] .s.c.a.CommonAnnotationBeanPostProcessor : Destroy method on bean with name 'scopedTarget.eurekaClient' threw an exception: java.lang.NoSuchMethodError: com.netflix.servo.monitor.Monitors.isObjectRegistered(Ljava/lang/String;Ljava/lang/Object;)Z
+2019-12-02 11:08:00.548  INFO 99235 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-02 11:08:00.556  INFO 99235 --- [Thread-22] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-02 11:08:07.423  INFO 99425 --- [main] c.e.apigateway.ZuulGatewayApplication    : The following profiles are active: local
+2019-12-02 11:08:08.484  INFO 99425 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-02 11:08:08.522  INFO 99425 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
+2019-12-02 11:08:08.646  WARN 99425 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+2019-12-02 11:08:08.667  WARN 99425 --- [main] o.s.boot.actuate.endpoint.EndpointId     : Endpoint ID 'hystrix.stream' contains invalid characters, please migrate to a valid format.
+2019-12-02 11:08:08.860  INFO 99425 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=84d51f73-5869-33be-b6ef-e941d737e86a
+2019-12-02 11:08:09.000  INFO 99425 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c5d2e804] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 11:08:09.106  INFO 99425 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e1eceb01] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-02 11:08:09.486  INFO 99425 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2019-12-02 11:08:09.505  INFO 99425 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-02 11:08:09.505  INFO 99425 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-12-02 11:08:09.601  INFO 99425 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-02 11:08:09.602  INFO 99425 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2155 ms
+2019-12-02 11:08:09.752  WARN 99425 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 11:08:09.752  INFO 99425 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 11:08:09.760  INFO 99425 --- [main] c.netflix.config.DynamicPropertyFactory  : DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@2519026b
+2019-12-02 11:08:11.193  INFO 99425 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-02 11:08:11.273  INFO 99425 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-02 11:08:11.322  INFO 99425 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-02 11:08:11.385  INFO 99425 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-02 11:08:11.387  INFO 99425 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-02 11:08:11.509  INFO 99425 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-02 11:08:11.618  INFO 99425 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-02 11:08:11.632  INFO 99425 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-12-02 11:08:11.638  INFO 99425 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@44abdb1f
+2019-12-02 11:08:11.749  INFO 99425 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-02 11:08:12.340  WARN 99425 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-02 11:08:12.505  INFO 99425 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2019-12-02 11:08:12.694  INFO 99425 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30e2016a, org.springframework.security.web.context.SecurityContextPersistenceFilter@37f41a81, org.springframework.security.web.header.HeaderWriterFilter@6c1e40d9, org.springframework.web.filter.CorsFilter@75f32817, org.springframework.security.web.authentication.logout.LogoutFilter@3b01897f, com.example.apigateway.config.JwtRequestFilter@8641b7d, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@430aae8e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@49bb808f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@681311a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@23a78c77, org.springframework.security.web.session.SessionManagementFilter@1c3d9e28, org.springframework.security.web.access.ExceptionTranslationFilter@2336cd91, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7cbf4f8c]
+2019-12-02 11:08:12.715  WARN 99425 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-02 11:08:12.715  INFO 99425 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-02 11:08:12.865  INFO 99425 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-02 11:08:13.571  INFO 99425 --- [main] o.s.c.n.zuul.ZuulFilterInitializer       : Starting filter initializer
+2019-12-02 11:08:13.643  INFO 99425 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-02 11:08:13.677  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-02 11:08:13.723  INFO 99425 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-02 11:08:13.723  INFO 99425 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-02 11:08:14.115  INFO 99425 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-02 11:08:14.116  INFO 99425 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-02 11:08:14.247  INFO 99425 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 11:08:14.260  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-02 11:08:14.260  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-02 11:08:14.260  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-02 11:08:14.260  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-02 11:08:14.261  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-02 11:08:14.261  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-02 11:08:14.261  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-02 11:08:14.418  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-02 11:08:14.422  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-02 11:08:14.425  INFO 99425 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-02 11:08:14.430  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575302894428 with initial instances count: 1
+2019-12-02 11:08:14.435  INFO 99425 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application API-GATEWAY with eureka with status UP
+2019-12-02 11:08:14.435  INFO 99425 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575302894435, current=UP, previous=STARTING]
+2019-12-02 11:08:14.437  INFO 99425 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/davids-mbp-2:api-gateway: registering service...
+2019-12-02 11:08:14.439  INFO 99425 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-02 11:08:14.460  INFO 99425 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-02 11:08:14.476  INFO 99425 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_API-GATEWAY/davids-mbp-2:api-gateway - registration status: 204
+2019-12-02 11:08:14.480  INFO 99425 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-02 11:08:14.616  INFO 99425 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2019-12-02 11:08:14.619  INFO 99425 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2019-12-02 11:08:14.621  INFO 99425 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2019-12-02 11:08:14.691  INFO 99425 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2019-12-02 11:08:14.693  INFO 99425 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8080
+2019-12-02 11:08:14.697  INFO 99425 --- [main] c.e.apigateway.ZuulGatewayApplication    : Started ZuulGatewayApplication in 8.556 seconds (JVM running for 9.419)
+2019-12-02 11:08:15.138  INFO 99425 --- [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-02 11:08:15.139  INFO 99425 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-02 11:08:15.151  INFO 99425 --- [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2019-12-02 11:11:16.753  WARN 99425 --- [http-nio-8080-exec-2] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:11:17.248  INFO 99425 --- [http-nio-8080-exec-2] c.netflix.config.ChainedDynamicProperty  : Flipping property: users.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-02 11:11:17.279  INFO 99425 --- [http-nio-8080-exec-2] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-users
+2019-12-02 11:11:17.280  INFO 99425 --- [http-nio-8080-exec-2] c.netflix.loadbalancer.BaseLoadBalancer  : Client: users instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=users,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2019-12-02 11:11:17.291  INFO 99425 --- [http-nio-8080-exec-2] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2019-12-02 11:11:17.314  INFO 99425 --- [http-nio-8080-exec-2] c.netflix.config.ChainedDynamicProperty  : Flipping property: users.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-02 11:11:17.318  INFO 99425 --- [http-nio-8080-exec-2] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client users initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=users,current list of Servers=[davids-mbp-2:8081],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:davids-mbp-2:8081;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Wed Dec 31 19:00:00 EST 1969;	First connection made: Wed Dec 31 19:00:00 EST 1969;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@13c06ee0
+2019-12-02 11:11:18.297  INFO 99425 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: users.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-02 11:13:14.590  INFO 99425 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-02 11:13:40.147  WARN 99425 --- [http-nio-8080-exec-5] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.742  WARN 99425 --- [http-nio-8080-exec-6] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.760  WARN 99425 --- [http-nio-8080-exec-7] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.770  WARN 99425 --- [http-nio-8080-exec-8] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.777  WARN 99425 --- [http-nio-8080-exec-10] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.779  WARN 99425 --- [http-nio-8080-exec-9] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.779  WARN 99425 --- [http-nio-8080-exec-1] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.797  WARN 99425 --- [http-nio-8080-exec-6] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.802  WARN 99425 --- [http-nio-8080-exec-7] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.830  WARN 99425 --- [http-nio-8080-exec-2] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.830  WARN 99425 --- [http-nio-8080-exec-3] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.831  WARN 99425 --- [http-nio-8080-exec-4] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.832  WARN 99425 --- [http-nio-8080-exec-9] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.853  WARN 99425 --- [http-nio-8080-exec-8] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.853  WARN 99425 --- [http-nio-8080-exec-5] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.878  WARN 99425 --- [http-nio-8080-exec-6] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.878  WARN 99425 --- [http-nio-8080-exec-1] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.878  WARN 99425 --- [http-nio-8080-exec-10] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.891  WARN 99425 --- [http-nio-8080-exec-7] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.902  WARN 99425 --- [http-nio-8080-exec-4] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:40.910  WARN 99425 --- [http-nio-8080-exec-2] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:41.098  WARN 99425 --- [http-nio-8080-exec-3] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:41.107  WARN 99425 --- [http-nio-8080-exec-9] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:41.108  WARN 99425 --- [http-nio-8080-exec-8] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:41.158  WARN 99425 --- [http-nio-8080-exec-6] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:41.231  WARN 99425 --- [http-nio-8080-exec-10] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:41.249  WARN 99425 --- [http-nio-8080-exec-1] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
+2019-12-02 11:13:41.874  WARN 99425 --- [http-nio-8080-exec-4] c.e.apigateway.config.JwtRequestFilter   : JWT Token does not begin with Bearer String
