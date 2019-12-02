@@ -2,25 +2,24 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for Unknown" enabled="true">
-        <sourceOutputDir name="../generated-sources/annotations" />
-        <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="maven-archiver (1)" />
-        <module name="maven-archiver (2)" />
-        <module name="maven-archiver (3)" />
-        <module name="maven-archiver (4)" />
-        <module name="maven-archiver (5)" />
-      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="api-gateway" />
-        <module name="comments-api" />
         <module name="eureka-server" />
         <module name="posts-api" />
+        <module name="comments-api" />
+        <module name="api-gateway" />
         <module name="users-api" />
+        <module name="email-service" />
+      </profile>
+      <profile name="Annotation profile for Unknown" enabled="true">
+        <sourceOutputDir name="../generated-sources/annotations" />
+        <sourceTestOutputDir name="../generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="maven-archiver (2)" />
+        <module name="maven-archiver (1)" />
+        <module name="maven-archiver (3)" />
       </profile>
     </annotationProcessing>
   </component>
@@ -28,6 +27,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-gateway" options="-parameters" />
       <module name="comments-api" options="-parameters" />
+      <module name="email-service" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="posts-api" options="-parameters" />
       <module name="users-api" options="-parameters" />

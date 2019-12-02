@@ -17,7 +17,6 @@ class ErrorResponse {
         this.httpStatus = httpStatus;
         this.message = message;
         this.cause = cause;
-
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         this.timestamp = LocalDateTime.now().format(formatter);
     }

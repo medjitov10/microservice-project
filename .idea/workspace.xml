@@ -1,113 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad3d74ae-7640-4a0c-9597-a67806292b23" name="Default Changelist" comment="">
+    <list default="true" id="73bd120c-4399-4a9b-a23a-12a2ff9e08dc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/comments-api/src/test/java/com/example/commentsapi/service/CommentPostServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-service/src/main/java/com/ga/emailservice/bean/EmailModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/exception/EntityNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/exception/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/exception/ExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts-api/src/test/java/com/example/postapi/controller/PostControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/posts-api/src/test/java/com/example/postapi/service/PostServiceImplTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/exception/EmailInvalidException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/exception/EntityNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/exception/ErrorResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/exception/ExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-api/src/test/java/com/example/usersapi/controller/ProfileControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-api/src/test/java/com/example/usersapi/controller/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/users-api/src/test/java/com/example/usersapi/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/ZuulGatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/ZuulGatewayApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/service/CustomUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/apigateway/service/CustomUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/config/SwaggerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/config/SwaggerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/exception/ErrorResponce.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/exception/ErrorResponce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/model/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/model/EmailModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/bean/EmailModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/bean/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/mq/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/mq/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/service/CommentPostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/service/CommentPostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/service/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/service/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/feignClientService/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comments-api/src/test/java/com/example/commentsapi/service/CommentServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/comments-api/src/test/java/com/example/commentsapi/service/CommentServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/src/main/java/com/example/commentsapi/model/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/src/main/java/com/ga/emailservice/bean/CommentDeserializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/src/main/java/com/ga/emailservice/bean/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/src/main/java/com/ga/emailservice/mq/Receiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/src/main/java/com/ga/emailservice/mq/Receiver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/email-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/PostsApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/PostsApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/controller/PostController.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/controller/PostController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/model/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/bean/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/model/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/model/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/bean/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/mq/Receiver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/serializer/CommentSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/serializer/CommentSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/feignClientService/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/service/PostService.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/service/PostService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/service/PostServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/service/PostServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts-api/src/main/java/com/example/postapi/service/SendEmailSMTP.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/UsersApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/UsersApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/config/JwtUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/config/JwtUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/controller/ProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/controller/ProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/controller/UsersController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/JwtResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/repository/ProfileRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/repository/ProfileRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/repository/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/service/UserServiceImpl.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/users-api/target/" />
-    <ignored path="$PROJECT_DIR$/posts-api/target/" />
-    <ignored path="$PROJECT_DIR$/comments-api/target/" />
-    <ignored path="$PROJECT_DIR$/eureka-server/target/" />
-    <ignored path="$PROJECT_DIR$/api-gateway/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/config/RabbitMQConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comments-api/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1110">
-              <caret line="74" selection-start-line="74" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/users-api/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-313" />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/comments-api/pom.xml" />
-        <option value="$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/config/RabbitMQConfig.java" />
-      </list>
-    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/api-gateway" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
         <option name="lookForNested" value="true" />
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1438" />
-    <option name="height" value="782" />
-  </component>
+  <component name="ProjectId" id="1UQnJCCC4VNEYSTygDBufYxrCKu" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-    </panes>
-  </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574362755565" />
-    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -121,125 +109,59 @@
       </list>
     </option>
   </component>
+  <component name="RunManager" selected="Spring Boot.PostsApiApplication">
+    <configuration name="CommentsApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="comments-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.commentsapi.CommentsApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmailServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="email-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ga.emailservice.EmailServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PostsApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="posts-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.postapi.PostsApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ad3d74ae-7640-4a0c-9597-a67806292b23" name="Default Changelist" comment="" />
-      <created>1574362337748</created>
+      <changelist id="73bd120c-4399-4a9b-a23a-12a2ff9e08dc" name="Default Changelist" comment="" />
+      <created>1575297613048</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1574362337748</updated>
-      <workItem from="1574362339074" duration="418000" />
-      <workItem from="1574451437240" duration="26000" />
-      <workItem from="1574451468884" duration="41000" />
+      <updated>1575297613048</updated>
+      <workItem from="1575297617038" duration="196000" />
+      <workItem from="1575297819617" duration="6000" />
+      <workItem from="1575297840607" duration="121000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="485000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1438" height="782" extended-state="0" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23853868" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.3289855" />
-      <window_info anchor="bottom" id="Java Enterprise" order="12" />
-      <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" />
-      <window_info anchor="right" id="Palette" order="4" />
-      <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Bean Validation" order="9" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/comments-api/src/main/java/com/example/commentsapi/config/RabbitMQConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/comments-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1110">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users-api/src/main/java/com/example/usersapi/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-313" />
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArquillianSettingsConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
