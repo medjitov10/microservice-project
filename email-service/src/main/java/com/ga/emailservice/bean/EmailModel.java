@@ -47,6 +47,7 @@ public class EmailModel {
         this.authorUsername = authorUsername;
     }
 
+
     public EmailModel() {
     }
 

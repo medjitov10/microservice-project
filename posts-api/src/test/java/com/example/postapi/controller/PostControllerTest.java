@@ -1,6 +1,7 @@
 package com.example.postapi.controller;
 
 import com.example.postapi.bean.Comment;
+import com.example.postapi.exception.EntityNotFoundException;
 import com.example.postapi.model.Post;
 import com.example.postapi.bean.User;
 import com.example.postapi.feignClientService.CommentService;
@@ -113,6 +114,7 @@ public class PostControllerTest {
         mockMvc.perform(requestBuilder)
                 .andExpect(status().isOk()).andReturn();
     }
+
 
     @Test
     public void getPostByUser_PostController_Succes() throws Exception {

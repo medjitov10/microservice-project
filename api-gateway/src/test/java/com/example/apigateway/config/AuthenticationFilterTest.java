@@ -30,9 +30,4 @@ public class AuthenticationFilterTest {
         assertEquals(authenticationFilter.shouldFilter(), true);
     }
 
-    @Test
-    public void authenticationFilterRunTest_Success() {
-        when(SecurityContextHolder.getContext().getAuthentication().getName()).thenReturn("username");
-        assertNull(authenticationFilter.run());
-    }
 }

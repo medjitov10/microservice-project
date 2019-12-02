@@ -70,6 +70,12 @@ public class PostServiceImplTest {
         assertEquals(postService.getPostByUser(any()), posts);
     }
 
+    @Test(expected = EntityNotFoundException.class)
+    public void getPostByUser_PostService_Fail() throws EntityNotFoundException {
+        List<Post> posts = new ArrayList<>();
+        postService.getPostByPostId(any());
+    }
+
     @Test
     public void getPostByPostId_PostService_Success() throws EntityNotFoundException {
         Optional<Post> optionalPost = Optional.of(post);

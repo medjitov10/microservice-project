@@ -1,7 +1,7 @@
-package com.example.commentsapi.Repository;
+package com.example.postapi.Repository;
 
-import com.example.commentsapi.bean.User;
-import com.example.commentsapi.repository.UserRepository;
+import com.example.postapi.bean.User;
+import com.example.postapi.repository.UserRepository;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,8 +13,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
 
 @RunWith(MockitoJUnitRunner.class)
 public class UserRepositoryTest {

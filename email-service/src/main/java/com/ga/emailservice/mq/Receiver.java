@@ -16,7 +16,7 @@ public class Receiver {
     SMTPService sendEmailSMTP;
 
     @RabbitHandler
-    public void receive(String stringEmail) throws Exception{
+    public boolean receive(String stringEmail) throws Exception{
         System.out.println("Message received!!!!!!!");
 
         ObjectMapper mapper = new ObjectMapper();
@@ -27,5 +27,6 @@ public class Receiver {
         String receiverEmail = emailModel.getAuthorEmail();
         sendEmailSMTP.setMailServerProperties();
         sendEmailSMTP.sendEmail(header, body, receiverEmail);
+        return true;
     }
 }

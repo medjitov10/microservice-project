@@ -18,6 +18,10 @@ public class JwtUtil implements Serializable {
 
     private static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
 
+    public void setSecret(String secret) {
+        this.secret = secret;
+    }
+
     @Value("${jwt.secret}")
     private String secret;
 
@@ -42,7 +46,7 @@ public class JwtUtil implements Serializable {
     }
 
     //verify if the token has expired
-    private Boolean isTokenExpired(String token) {
+    public Boolean isTokenExpired(String token) {
         final Date expiration = getExpirationDateFromToken(token);
         return expiration.before(new Date());
     }

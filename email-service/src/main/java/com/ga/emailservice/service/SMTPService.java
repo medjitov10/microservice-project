@@ -16,16 +16,17 @@ import javax.mail.internet.MimeMessage;
 public class SMTPService {
     Session mailSession;
 
-    public void setMailServerProperties()
+    public boolean setMailServerProperties()
     {
         Properties emailProperties = System.getProperties();
         emailProperties.put("mail.smtp.port", "587");
         emailProperties.put("mail.smtp.auth", "true");
         emailProperties.put("mail.smtp.starttls.enable", "true");
         mailSession = Session.getDefaultInstance(emailProperties, null);
+        return true;
     }
 
-    private MimeMessage draftEmailMessage(String header, String body, String email) throws AddressException, MessagingException
+    public MimeMessage draftEmailMessage(String header, String body, String email) throws AddressException, MessagingException
     {
         String[] toEmails = { email };
         String emailSubject = header;
@@ -50,7 +51,7 @@ public class SMTPService {
         return emailMessage;
     }
 
-    public void sendEmail(String header, String body, String email) throws AddressException, MessagingException
+    public boolean sendEmail(String header, String body, String email) throws AddressException, MessagingException
     {
         System.out.println("Send Email");
         /**
@@ -72,5 +73,6 @@ public class SMTPService {
         transport.sendMessage(emailMessage, emailMessage.getAllRecipients());
         transport.close();
         System.out.println("Email sent successfully.");
+        return true;
     }
 }
