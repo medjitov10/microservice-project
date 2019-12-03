@@ -20,13 +20,14 @@ public class JwtUtilTest {
     private String username;
     @InjectMocks
     JwtUtil jwtUtil;
+
     @Mock
     UserDetails userDetails;
     @Before
     public void init() {
         jwtUtil.setSecret("pancakes");
         when(userDetails.getUsername()).thenReturn("ben");
-        jwtToken = jwtUtil.generateToken(userDetails);
+        jwtToken = jwtUtil.generateToken(userDetails.getUsername());
         date = new Date();
         username = "username";
     }
