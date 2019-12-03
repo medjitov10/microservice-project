@@ -18,6 +18,20 @@ public class JwtUtil implements Serializable {
 
     private static final long JWT_TOKEN_VALIDITY = 5 * 60 * 60;
 
+    public String generateToken(String username) {
+        Map<String, Object> claims = new HashMap<>();
+
+        return doGenerateToken(claims, username);
+    }
+
+    private String doGenerateToken(Map<String, Object> claims, String subject) {
+        return Jwts.builder().setClaims(claims)
+                .setSubject(subject)
+                .setIssuedAt(new Date(System.currentTimeMillis()))
+                .setExpiration(new Date(System.currentTimeMillis() + JWT_TOKEN_VALIDITY * 1000))
+                .signWith(SignatureAlgorithm.HS512, secret).compact();
+    }
+
     public void setSecret(String secret) {
         this.secret = secret;
     }
