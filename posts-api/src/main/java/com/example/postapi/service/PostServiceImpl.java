@@ -8,9 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class PostServiceImpl implements PostService {
+    Logger logger = LoggerFactory.getLogger(PostServiceImpl.class);
+
     @Autowired
     PostRepository postRepository;
 
@@ -35,6 +39,7 @@ public class PostServiceImpl implements PostService {
             commentService.deleteCommentsByPostId(postId);
             postRepository.delete(post);
         } else {
+            logger.error("post not found");
             throw new EntityNotFoundException("Post not found");
         }
     }
@@ -48,8 +53,10 @@ public class PostServiceImpl implements PostService {
     public Post getPostByPostId(Long postId) throws EntityNotFoundException {
         Post post = postRepository.findById(postId).orElse(null);
 
-        if (post == null)
+        if (post == null) {
+            logger.error("post not found");
             throw new EntityNotFoundException("Post not found");
+        }
         return post;
     }
 }
