@@ -2,6 +2,7 @@ package com.example.postapi.controller;
 
 import com.example.postapi.bean.Comment;
 import com.example.postapi.exception.EntityNotFoundException;
+import com.example.postapi.exception.ExceptionHandler;
 import com.example.postapi.model.Post;
 import com.example.postapi.bean.User;
 import com.example.postapi.feignClientService.CommentService;
@@ -26,8 +27,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.doNothing;
-import static org.mockito.Mockito.when;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
@@ -54,7 +55,10 @@ public class PostControllerTest {
     private MockMvc mockMvc;
     @Before
     public void init() {
-        mockMvc = MockMvcBuilders.standaloneSetup(postController).build();
+
+        mockMvc = MockMvcBuilders.standaloneSetup(postController)
+                .setControllerAdvice(ExceptionHandler.class)
+                .build();
     }
 
     @Before
@@ -88,6 +92,8 @@ public class PostControllerTest {
                 .andExpect(content().string(jsonMapper)).andReturn();
     }
 
+
+
     @Test
     public void allPost_PostController_Success() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -115,6 +121,16 @@ public class PostControllerTest {
                 .andExpect(status().isOk()).andReturn();
     }
 
+    @Test
+    public void deletePost_PostController_Exception() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .delete("/1").contentType(MediaType.APPLICATION_JSON);
+
+        doThrow(new EntityNotFoundException("Post not found")).when(postService).deletePost(any());
+
+        mockMvc.perform(requestBuilder)
+            .andExpect(status().isBadRequest()).andReturn();
+    }
 
     @Test
     public void getPostByUser_PostController_Succes() throws Exception {

@@ -20,10 +20,10 @@ public class ExceptionHandler extends ResponseEntityExceptionHandler{
 
     @org.springframework.web.bind.annotation.ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<ErrorResponse> handleEntityNotFoundException(Exception e) {
-        ErrorResponse errorResponse = new ErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR,
+        ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST,
                 e.getMessage());
 
-        return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+        return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 
     @Override

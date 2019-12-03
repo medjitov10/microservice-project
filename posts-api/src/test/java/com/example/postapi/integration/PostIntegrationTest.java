@@ -89,5 +89,5 @@ public class PostIntegrationTest {
     public void deleteNyId_Post_Exception(){
         postRepository.deleteById(1L);
     }
-    
+
 }
