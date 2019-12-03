@@ -10,9 +10,13 @@ import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @Service
 public class CommentPostServiceImpl implements CommentPostService {
+    Logger logger = LoggerFactory.getLogger(CommentPostServiceImpl.class);
+
     @Autowired
     CommentRepository commentRepository;
 
@@ -33,6 +37,7 @@ public class CommentPostServiceImpl implements CommentPostService {
         try {
             return commentRepository.findByPostId(postId);
         } catch (Exception e) {
+            logger.error("Post ID not found");
             throw new EntityNotFoundException("There is no post with id: " + postId);
         }
     }

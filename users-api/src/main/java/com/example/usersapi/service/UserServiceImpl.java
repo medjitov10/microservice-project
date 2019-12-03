@@ -31,7 +31,7 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
 
-    Logger logger = LoggerFactory.getLogger(UserController.class);
+    Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
 
     /**
      * Autowired - allows Spring to resolve and inject the collaborating bean into this class.

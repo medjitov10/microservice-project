@@ -8,9 +8,14 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 @Service
 @RabbitListener(queues = "queue1")
 public class Receiver {
+
+    Logger logger = LoggerFactory.getLogger(Receiver.class);
 
     @Autowired
     SMTPService sendEmailSMTP;
@@ -27,6 +32,7 @@ public class Receiver {
         String receiverEmail = emailModel.getAuthorEmail();
         sendEmailSMTP.setMailServerProperties();
         sendEmailSMTP.sendEmail(header, body, receiverEmail);
+        logger.info("Email notification sent successfully");
         return true;
     }
 }
