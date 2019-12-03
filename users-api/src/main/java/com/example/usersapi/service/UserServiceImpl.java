@@ -1,6 +1,7 @@
 package com.example.usersapi.service;
 
 import com.example.usersapi.config.JwtUtil;
+import com.example.usersapi.controller.UserController;
 import com.example.usersapi.exception.EmailInvalidException;
 import com.example.usersapi.exception.EntityNotFoundException;
 import com.example.usersapi.model.Profile;
@@ -9,6 +10,8 @@ import com.example.usersapi.model.User;
 import com.example.usersapi.repository.ProfileRepository;
 import com.example.usersapi.repository.RoleRepository;
 import com.example.usersapi.repository.UserRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +20,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import javax.security.auth.login.CredentialException;
-import java.sql.SQLOutput;
 import java.util.Arrays;
 import java.util.List;
 
@@ -28,6 +30,8 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+
+    Logger logger = LoggerFactory.getLogger(UserController.class);
 
     /**
      * Autowired - allows Spring to resolve and inject the collaborating bean into this class.
@@ -85,6 +89,7 @@ public class UserServiceImpl implements UserService {
         if(userRepository.save(user) != null) {
             return Arrays.asList( jwtUtil.generateToken(user.getUsername()), user.getUsername());
         } else {
+            logger.info("user could not sign up");
             throw new Exception("Something went wrong. Try again.");
         }
     }
@@ -102,8 +107,10 @@ public class UserServiceImpl implements UserService {
     public List<String> logIn(User user) throws CredentialException {
         User savedUser = userRepository.findByUsername(user.getUsername());
         if( savedUser != null && bCryptPasswordEncoder.matches(user.getPassword(), savedUser.getPassword())) {
+            logger.info("user logged in");
             return Arrays.asList( jwtUtil.generateToken(user.getUsername()), savedUser.getUsername());
         } else {
+            logger.warn("user could not login");
             throw new CredentialException("Invalid email or password");
         }
     }

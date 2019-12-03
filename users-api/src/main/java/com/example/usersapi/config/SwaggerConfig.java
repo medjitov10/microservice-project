@@ -14,10 +14,16 @@ import java.io.IOException;
 
 @Configuration
 public class SwaggerConfig {
+
+    /**
+     * This method is used to create documentation with Swagger. Tells where the base package is to search for API endpoints.
+     * @return API info
+     * @throws IOException
+     * @throws XmlPullParserException
+     */
     @Bean
     public Docket api() throws IOException, XmlPullParserException {
         MavenXpp3Reader reader = new MavenXpp3Reader();
-//        Model model = reader.read(new FileReader("pom.xml"));
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.example.usersapi.controller"))
