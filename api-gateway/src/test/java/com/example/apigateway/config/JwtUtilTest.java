@@ -11,6 +11,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Date;
 
 import static org.junit.Assert.assertNotNull;
+import static org.mockito.Mockito.when;
 
 @RunWith(MockitoJUnitRunner.class)
 public class JwtUtilTest {
@@ -24,7 +25,8 @@ public class JwtUtilTest {
     @Before
     public void init() {
         jwtUtil.setSecret("pancakes");
-        jwtToken = "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJQSURBUkFTIiwiZXhwIjoxNTc1MzI4NjkxLCJpYXQiOjE1NzUzMTA2OTF9.Ne9VNK6avIfwiWsXYilPLCvBrhBUJ3jnxxkUynGleBqIF9Hfpw8t43Y0Wj_OctnnlqKSzfBy592-5xzU4x_RYQ";
+        when(userDetails.getUsername()).thenReturn("ben");
+        jwtToken = jwtUtil.generateToken(userDetails);
         date = new Date();
         username = "username";
     }

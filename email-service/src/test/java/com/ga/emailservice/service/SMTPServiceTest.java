@@ -29,9 +29,4 @@ public class SMTPServiceTest {
         MimeMessage emailTarget = smtpService.draftEmailMessage("email", "qwe", "qwe");
         assertNotNull(emailTarget);
     }
-
-    @Test
-    public void sendEmail_SMTPServerService_Success() throws MessagingException {
-        assertEquals(smtpService.sendEmail("email", "qwe", "qwe"), true);
-    }
 }
