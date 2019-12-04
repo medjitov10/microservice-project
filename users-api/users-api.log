@@ -979,3 +979,78 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2019-12-04 11:24:18.761  WARN 28550 --- [http-nio-8081-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 23505
 2019-12-04 11:24:18.768 ERROR 28550 --- [http-nio-8081-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : ERROR: duplicate key value violates unique constraint "uk_6dotkott2kjsp8vw4d0m25fb7"
   Detail: Key (email)=(user@gmail.com) already exists.
+2019-12-04 11:27:36.157  INFO 28550 --- [Thread-47] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application USERS with eureka with status DOWN
+2019-12-04 11:27:36.158  WARN 28550 --- [Thread-47] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575476856158, current=DOWN, previous=UP]
+2019-12-04 11:27:36.160  INFO 28550 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/172.16.3.218:users:8081: registering service...
+2019-12-04 11:27:36.242  INFO 28550 --- [Thread-47] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-12-04 11:27:36.257  INFO 28550 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/172.16.3.218:users:8081 - registration status: 204
+2019-12-04 11:27:36.299  INFO 28550 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 11:27:36.485  INFO 28550 --- [Thread-47] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2019-12-04 11:27:39.495  INFO 28550 --- [Thread-47] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2019-12-04 11:27:39.497  WARN 28550 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor shutting down, can't accept the task
+2019-12-04 11:27:39.510  INFO 28550 --- [Thread-47] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/172.16.3.218:users:8081 - deregister  status: 200
+2019-12-04 11:27:39.563  INFO 28550 --- [Thread-47] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2019-12-04 11:27:39.564  INFO 28550 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2019-12-04 11:27:39.575  INFO 28550 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 11:28:00.949  INFO 30607 --- [main] c.example.usersapi.UsersApiApplication   : The following profiles are active: local
+2019-12-04 11:28:01.716  INFO 30607 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 11:28:01.776  INFO 30607 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54ms. Found 3 repository interfaces.
+2019-12-04 11:28:02.005  INFO 30607 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=890c7434-0fd9-3291-8ad8-de0a3cfebf40
+2019-12-04 11:28:02.103  INFO 30607 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cb2156a8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 11:28:02.125  INFO 30607 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$e73b59a5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 11:28:02.325  INFO 30607 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-12-04 11:28:02.345  INFO 30607 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-04 11:28:02.346  INFO 30607 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.22]
+2019-12-04 11:28:02.479  INFO 30607 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-04 11:28:02.480  INFO 30607 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1518 ms
+2019-12-04 11:28:02.679  INFO 30607 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 11:28:02.888  INFO 30607 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 11:28:02.940  INFO 30607 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-12-04 11:28:02.986  INFO 30607 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.3.10.Final}
+2019-12-04 11:28:02.988  INFO 30607 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2019-12-04 11:28:03.118  INFO 30607 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-12-04 11:28:03.237  INFO 30607 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-04 11:28:03.250  INFO 30607 --- [main] o.h.e.j.e.i.LobCreatorBuilderImpl        : HHH000422: Disabling contextual LOB creation as connection was null
+2019-12-04 11:28:03.255  INFO 30607 --- [main] org.hibernate.type.BasicTypeRegistry     : HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@b791a81
+2019-12-04 11:28:03.966  INFO 30607 --- [main] o.h.t.schema.internal.SchemaCreatorImpl  : HHH000476: Executing import script 'org.hibernate.tool.schema.internal.exec.ScriptSourceInputNonExistentImpl@117b2cc6'
+2019-12-04 11:28:03.969  INFO 30607 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 11:28:04.747  WARN 30607 --- [main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 11:28:04.876  WARN 30607 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 11:28:04.876  INFO 30607 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 11:28:04.880  WARN 30607 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 11:28:04.880  INFO 30607 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 11:28:05.049  INFO 30607 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 11:28:05.470  INFO 30607 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-04 11:28:05.513  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-04 11:28:05.942  INFO 30607 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-04 11:28:05.942  INFO 30607 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-04 11:28:06.056  INFO 30607 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-04 11:28:06.056  INFO 30607 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-04 11:28:06.236  INFO 30607 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 11:28:06.251  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-04 11:28:06.251  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-04 11:28:06.251  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-04 11:28:06.251  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-04 11:28:06.251  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-04 11:28:06.252  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-04 11:28:06.252  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-04 11:28:06.398  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-04 11:28:06.401  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-04 11:28:06.403  INFO 30607 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-04 11:28:06.407  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575476886406 with initial instances count: 3
+2019-12-04 11:28:06.410  INFO 30607 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application USERS with eureka with status UP
+2019-12-04 11:28:06.411  INFO 30607 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575476886411, current=UP, previous=STARTING]
+2019-12-04 11:28:06.413  INFO 30607 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/172.16.3.218:users:8081: registering service...
+2019-12-04 11:28:06.416  INFO 30607 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-04 11:28:06.436  INFO 30607 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-04 11:28:06.462  INFO 30607 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-04 11:28:06.462  INFO 30607 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_USERS/172.16.3.218:users:8081 - registration status: 204
+2019-12-04 11:28:06.692  INFO 30607 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-12-04 11:28:06.693  INFO 30607 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2019-12-04 11:28:06.695  INFO 30607 --- [main] c.example.usersapi.UsersApiApplication   : Started UsersApiApplication in 16.449 seconds (JVM running for 22.228)
+2019-12-04 11:28:56.828  INFO 30607 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-04 11:28:56.829  INFO 30607 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-04 11:28:56.848  INFO 30607 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 19 ms
+2019-12-04 11:28:57.035  INFO 30607 --- [http-nio-8081-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory

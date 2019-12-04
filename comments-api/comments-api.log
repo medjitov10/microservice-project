@@ -725,6 +725,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2019-12-04 11:12:04.464  INFO 29227 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-12-04 11:17:04.484  INFO 29227 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
 2019-12-04 11:22:04.501  INFO 29227 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+<<<<<<< HEAD
 2019-12-04 11:36:03.853  INFO 6170 --- [main] c.e.commentsapi.CommentsApiApplication   : The following profiles are active: local
 2019-12-04 11:36:04.466  INFO 6170 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
 2019-12-04 11:36:04.509  INFO 6170 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37ms. Found 1 repository interfaces.
@@ -905,3 +906,7 @@ java.lang.IllegalStateException: Shutdown in progress
 2019-12-04 11:39:51.437  INFO 6282 --- [http-nio-8082-exec-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
 2019-12-04 11:39:52.199  INFO 6282 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: posts.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
 2019-12-04 11:39:59.325  INFO 6282 --- [http-nio-8082-exec-2] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [localhost:5672]
+||||||| merged common ancestors
+=======
+2019-12-04 11:27:04.543  INFO 29227 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+>>>>>>> eaa1c6f70ec891706557d8f80348b318256398c6
