@@ -10,6 +10,7 @@ import com.example.usersapi.model.User;
 import com.example.usersapi.repository.ProfileRepository;
 import com.example.usersapi.repository.RoleRepository;
 import com.example.usersapi.repository.UserRepository;
+import com.sun.tools.internal.ws.wsdl.framework.DuplicateEntityException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -80,6 +81,10 @@ public class UserServiceImpl implements UserService {
         if (!isValidEmail(user.getEmail())) {
             throw new EmailInvalidException("Email validation");
         }
+        User foundUser = userRepository.findByUsername(user.getUsername());
+
+        if(foundUser != null )
+            throw new Exception("This user already exist");
         user.setPassword(encoder().encode(user.getPassword()));
         Role role = roleRepository.findById(1l).orElse(new Role("ROLE_USER"));
 

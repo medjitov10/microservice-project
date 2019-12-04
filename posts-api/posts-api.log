@@ -963,3 +963,4 @@ Using generated security password: b183280e-e10a-4332-8f3f-54053e869b7f
 2019-12-04 11:24:11.028  INFO 30370 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-12-04 11:24:11.030  INFO 30370 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-12-04 11:24:11.050  INFO 30370 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-12-04 11:28:19.705  INFO 30370 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
