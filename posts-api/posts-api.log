@@ -963,3 +963,70 @@ Using generated security password: b183280e-e10a-4332-8f3f-54053e869b7f
 2019-12-04 11:24:11.028  INFO 30370 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2019-12-04 11:24:11.030  INFO 30370 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2019-12-04 11:24:11.050  INFO 30370 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2019-12-04 11:26:09.456  INFO 5682 --- [main] com.example.postapi.PostsApiApplication  : The following profiles are active: local
+2019-12-04 11:26:10.102  INFO 5682 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 11:26:10.143  INFO 5682 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35ms. Found 1 repository interfaces.
+2019-12-04 11:26:10.304  INFO 5682 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=54836fef-d2d8-3e08-8e63-01d459aaa195
+2019-12-04 11:26:10.402  INFO 5682 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 11:26:10.424  INFO 5682 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a7f83b52] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 11:26:10.565  INFO 5682 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-12-04 11:26:10.571  INFO 5682 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-04 11:26:10.571  INFO 5682 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-04 11:26:10.689  INFO 5682 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-04 11:26:10.690  INFO 5682 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1220 ms
+2019-12-04 11:26:10.950  INFO 5682 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-04 11:26:11.026  INFO 5682 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-04 11:26:11.107  INFO 5682 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-04 11:26:11.195  INFO 5682 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-04 11:26:11.686  INFO 5682 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 11:26:11.763  INFO 5682 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 11:26:11.794  INFO 5682 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-04 11:26:11.801  INFO 5682 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 11:26:12.200  WARN 5682 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 11:26:12.483  WARN 5682 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 11:26:12.483  INFO 5682 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 11:26:12.485  WARN 5682 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 11:26:12.486  INFO 5682 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 11:26:12.572  INFO 5682 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 11:26:12.880  INFO 5682 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-04 11:26:12.903  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-04 11:26:13.221  INFO 5682 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-04 11:26:13.221  INFO 5682 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-04 11:26:13.312  INFO 5682 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-04 11:26:13.312  INFO 5682 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-04 11:26:13.437  INFO 5682 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 11:26:13.450  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2019-12-04 11:26:13.450  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2019-12-04 11:26:13.450  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2019-12-04 11:26:13.450  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2019-12-04 11:26:13.450  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2019-12-04 11:26:13.450  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2019-12-04 11:26:13.451  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2019-12-04 11:26:13.570  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2019-12-04 11:26:13.572  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2019-12-04 11:26:13.574  INFO 5682 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2019-12-04 11:26:13.577  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575476773576 with initial instances count: 4
+2019-12-04 11:26:13.580  INFO 5682 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application POSTS with eureka with status UP
+2019-12-04 11:26:13.580  INFO 5682 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575476773580, current=UP, previous=STARTING]
+2019-12-04 11:26:13.582  INFO 5682 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/172.16.7.201:posts:8083: registering service...
+2019-12-04 11:26:13.583  INFO 5682 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2019-12-04 11:26:13.600  INFO 5682 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2019-12-04 11:26:13.612  INFO 5682 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/172.16.7.201:posts:8083 - registration status: 204
+2019-12-04 11:26:13.612  INFO 5682 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2019-12-04 11:26:13.805  INFO 5682 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2019-12-04 11:26:13.806  INFO 5682 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2019-12-04 11:26:13.808  INFO 5682 --- [main] com.example.postapi.PostsApiApplication  : Started PostsApiApplication in 14.956 seconds (JVM running for 20.567)
+2019-12-04 11:27:16.003  INFO 5682 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-12-04 11:27:16.003  INFO 5682 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2019-12-04 11:27:16.012  INFO 5682 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2019-12-04 11:31:13.462  INFO 5682 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 11:31:23.460  INFO 5682 --- [http-nio-8083-exec-10] c.netflix.config.ChainedDynamicProperty  : Flipping property: comments.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 11:31:23.487  INFO 5682 --- [http-nio-8083-exec-10] c.n.u.concurrent.ShutdownEnabledTimer    : Shutdown hook installed for: NFLoadBalancer-PingTimer-comments
+2019-12-04 11:31:23.488  INFO 5682 --- [http-nio-8083-exec-10] c.netflix.loadbalancer.BaseLoadBalancer  : Client: comments instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=comments,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2019-12-04 11:31:23.499  INFO 5682 --- [http-nio-8083-exec-10] c.n.l.DynamicServerListLoadBalancer      : Using serverListUpdater PollingServerListUpdater
+2019-12-04 11:31:23.524  INFO 5682 --- [http-nio-8083-exec-10] c.netflix.config.ChainedDynamicProperty  : Flipping property: comments.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 11:31:23.527  INFO 5682 --- [http-nio-8083-exec-10] c.n.l.DynamicServerListLoadBalancer      : DynamicServerListLoadBalancer for client comments initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=comments,current list of Servers=[172.16.7.201:8082],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:172.16.7.201:8082;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Wed Dec 31 19:00:00 EST 1969;	First connection made: Wed Dec 31 19:00:00 EST 1969;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@228feeb3
+2019-12-04 11:31:24.508  INFO 5682 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: comments.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2019-12-04 11:36:13.474  INFO 5682 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
