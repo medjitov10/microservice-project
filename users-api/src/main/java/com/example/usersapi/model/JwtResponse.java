@@ -24,6 +24,7 @@ public class JwtResponse {
 
     /**
      * constructor with jwt and username as arguments
+     * @param list takes in a list of strings
      */
     public JwtResponse(List<String> list) {
     	this.jwt = list.get(0);
