@@ -13,7 +13,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableFeignClients
 @EnableSwagger2
 public class CommentsApiApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(CommentsApiApplication.class, args);
 	}

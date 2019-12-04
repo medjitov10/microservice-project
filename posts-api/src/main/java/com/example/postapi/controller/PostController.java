@@ -24,6 +24,13 @@ public class PostController {
     @ApiOperation(value = "create post", notes = "authorized users can create posts", response = Post.class)
     @PostMapping
     public Post createPost(@RequestHeader("username") String username, @RequestBody Post post){
+        System.out.println("fdsafasdfd");
+        System.out.println("fdsafasdfd");
+        System.out.println("fdsafasdfd");
+        System.out.println("fdsafasdfd");
+        System.out.println("fdsafasdfd");
+        System.out.println("fdsafasdfd");
+
         return postService.createPost(username, post);
     }
 

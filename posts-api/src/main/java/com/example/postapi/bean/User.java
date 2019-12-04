@@ -1,9 +1,5 @@
 package com.example.postapi.bean;
 
-import org.springframework.stereotype.Service;
-
-import javax.persistence.Entity;
-
 public class User {
 
     private long id;
