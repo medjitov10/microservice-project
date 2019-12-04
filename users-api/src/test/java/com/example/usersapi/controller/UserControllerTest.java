@@ -1,5 +1,7 @@
 package com.example.usersapi.controller;
 
+import com.example.usersapi.exception.EmailInvalidException;
+import com.example.usersapi.exception.ExceptionHandler;
 import com.example.usersapi.model.User;
 import com.example.usersapi.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -23,6 +25,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -40,7 +43,9 @@ public class UserControllerTest {
     private MockMvc mockMvc;
     @Before
     public void init() {
-        mockMvc = MockMvcBuilders.standaloneSetup(userController).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(userController)
+                .setControllerAdvice(ExceptionHandler.class)
+                .build();
     }
 
     @Before
@@ -66,6 +71,19 @@ public class UserControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(content().string(listOfusersString)).andReturn();
     }
+
+    @Test
+    public void signup_UserController_Exception() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/signup").contentType(MediaType.APPLICATION_JSON)
+                .content(createUserInJson());
+
+        doThrow(new EmailInvalidException("Email validation")).when(userService).signUp(any());
+
+        mockMvc.perform(requestBuilder)
+               .andExpect(status().isNotAcceptable()).andReturn();
+    }
+
 
     @Test
     public void signup_UserController_Success() throws Exception {
@@ -96,10 +114,6 @@ public class UserControllerTest {
                 .andExpect(content().json("{\"username\":\"user\",\"token\":\"123456\"}"))
                 .andReturn();
     }
-//    @PostMapping("/login")
-//    public ResponseEntity<?> login(@RequestBody User user) {
-//        return ResponseEntity.ok(new JwtResponse(userService.logIn(user)));
-//    }
     private String createUserInJson() {
         return "{\"id\":1,\"title\":\"Bye bye\",\"description\":\"hi hi\",\"user\":{\"username\":\"osman\"}}";
     }

@@ -26,6 +26,10 @@ public class JwtUtil implements Serializable {
     @Value("${jwt.secret}")
     private String secret;
 
+    public void setSecret(String secret) {
+        this.secret = secret;
+    }
+
     /**
      * These two methods are used to generate a token.
      * The encryption algorithm and time of expiration are set

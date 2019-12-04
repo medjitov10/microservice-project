@@ -1,5 +1,7 @@
 package com.example.usersapi.controller;
 
+import com.example.usersapi.exception.EntityNotFoundException;
+import com.example.usersapi.exception.ExceptionHandler;
 import com.example.usersapi.model.Profile;
 import com.example.usersapi.service.UserService;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -22,6 +24,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import javax.ws.rs.core.MediaType;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -57,7 +60,17 @@ public class ProfileControllerTest {
                 .andExpect(content().string(jsonMapper));
     }
 
+    @Test
+    public void createProfile_ProfileController_Exception() throws Exception {
+        RequestBuilder requestBuilder = MockMvcRequestBuilders
+                .post("/profile").contentType(MediaType.APPLICATION_JSON)
+                .header("username", username).content(createProfileInJson());
 
+        doThrow(new EntityNotFoundException("User does not exist")).when(userService).createProfile(any(), any());
+
+        mockMvc.perform(requestBuilder)
+                .andExpect(status().isInternalServerError()).andReturn();
+    }
     @Test
     public void getProfile_ProfileController_Success() throws Exception {
         RequestBuilder requestBuilder = MockMvcRequestBuilders
@@ -74,7 +87,8 @@ public class ProfileControllerTest {
 
     @Before
     public void init() throws JsonProcessingException {
-        mockMvc = MockMvcBuilders.standaloneSetup(profileController).build();
+        mockMvc = MockMvcBuilders.standaloneSetup(profileController).setControllerAdvice(ExceptionHandler.class)
+                .build();
     }
 
     @Before
