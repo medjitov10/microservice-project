@@ -123,16 +123,14 @@ public class UserServiceImpl implements UserService {
      * @return Profile created.
      */
     @Override
-    public Profile createProfile(Profile profile, String username) throws EntityNotFoundException {
+    public Profile createProfile(Profile profile, String username)  {
         User user = userRepository.findByUsername(username);
         if(user.getProfile() != null) {
             profile.setId(user.getProfile().getId());
-        } else {
-            throw new EntityNotFoundException("User does not exist");
         }
         profile.setUser(user);
         profileRepository.save(profile);
-        return user.getProfile();
+        return profile;
     }
 
     /**
