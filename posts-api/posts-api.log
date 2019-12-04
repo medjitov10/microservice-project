@@ -1030,3 +1030,4 @@ Using generated security password: b183280e-e10a-4332-8f3f-54053e869b7f
 ]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@228feeb3
 2019-12-04 11:31:24.508  INFO 5682 --- [PollingServerListUpdater-0] c.netflix.config.ChainedDynamicProperty  : Flipping property: comments.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
 2019-12-04 11:36:13.474  INFO 5682 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2019-12-04 11:41:13.486  INFO 5682 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
