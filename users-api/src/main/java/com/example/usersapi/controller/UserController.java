@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.security.auth.login.CredentialException;
 
 /**
- * @RestCOntroller annotation is used to create a controller mapping to this class
+ * RestController annotation is used to create a controller mapping to this class
  */
 
 @RestController

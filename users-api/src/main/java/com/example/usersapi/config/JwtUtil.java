@@ -11,7 +11,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Component is a generic stereotype for any Spring-managed component
+ * Component is a generic stereotype for any Spring-managed component
  */
 @Component
 public class JwtUtil implements Serializable {
@@ -29,6 +29,8 @@ public class JwtUtil implements Serializable {
     /**
      * These two methods are used to generate a token.
      * The encryption algorithm and time of expiration are set
+     * @param username
+     * @return
      */
     public String generateToken(String username) {
         Map<String, Object> claims = new HashMap<>();

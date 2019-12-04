@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * @RestCOntroller and RequestMapping annotations are used to create a mapping to this class and to every API endpoint
+ * RestCOntroller and RequestMapping annotations are used to create a mapping to this class and to every API endpoint
  */
 
 @RestController

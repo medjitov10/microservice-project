@@ -1,68 +1,37 @@
-2019-12-03 11:01:35.512  INFO 35395 --- [main] com.example.postapi.PostsApiApplication  : The following profiles are active: local
-2019-12-03 11:01:36.879  INFO 35395 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-12-03 11:01:36.963  INFO 35395 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 74ms. Found 1 repository interfaces.
-2019-12-03 11:01:37.368  INFO 35395 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=54836fef-d2d8-3e08-8e63-01d459aaa195
-2019-12-03 11:01:37.474  INFO 35395 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-03 11:01:37.499  INFO 35395 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$665dc824] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-12-03 11:01:37.726  INFO 35395 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
-2019-12-03 11:01:37.735  INFO 35395 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2019-12-03 11:01:37.736  INFO 35395 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
-2019-12-03 11:01:37.850  INFO 35395 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2019-12-03 11:01:37.850  INFO 35395 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2305 ms
-2019-12-03 11:01:38.148  INFO 35395 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2019-12-03 11:01:38.220  INFO 35395 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
-2019-12-03 11:01:38.348  INFO 35395 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
-2019-12-03 11:01:38.432  INFO 35395 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
-2019-12-03 11:01:38.908  INFO 35395 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2019-12-03 11:01:39.058  INFO 35395 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2019-12-03 11:01:39.105  INFO 35395 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2019-12-03 11:01:39.112  INFO 35395 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-12-03 11:01:39.946  WARN 35395 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-12-03 11:01:40.321  WARN 35395 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-03 11:01:40.321  INFO 35395 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-03 11:01:40.324  WARN 35395 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
-2019-12-03 11:01:40.324  INFO 35395 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
-2019-12-03 11:01:40.466  INFO 35395 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2019-12-03 11:01:41.242  INFO 35395 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2019-12-03 11:01:41.268  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2019-12-03 11:01:41.592  INFO 35395 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2019-12-03 11:01:41.592  INFO 35395 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2019-12-03 11:01:41.680  INFO 35395 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2019-12-03 11:01:41.680  INFO 35395 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2019-12-03 11:01:41.816  INFO 35395 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2019-12-03 11:01:41.828  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2019-12-03 11:01:41.828  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2019-12-03 11:01:41.828  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2019-12-03 11:01:41.828  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2019-12-03 11:01:41.828  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2019-12-03 11:01:41.828  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2019-12-03 11:01:41.828  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2019-12-03 11:01:41.944  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2019-12-03 11:01:41.946  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2019-12-03 11:01:41.948  INFO 35395 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2019-12-03 11:01:41.950  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1575388901950 with initial instances count: 2
-2019-12-03 11:01:41.954  INFO 35395 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application POSTS with eureka with status UP
-2019-12-03 11:01:41.954  INFO 35395 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575388901954, current=UP, previous=STARTING]
-2019-12-03 11:01:41.956  INFO 35395 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/172.16.7.201:posts:8083: registering service...
-2019-12-03 11:01:41.956  INFO 35395 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2019-12-03 11:01:41.971  INFO 35395 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2019-12-03 11:01:41.985  INFO 35395 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2019-12-03 11:01:41.990  INFO 35395 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/172.16.7.201:posts:8083 - registration status: 204
-2019-12-03 11:01:42.137  INFO 35395 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
-2019-12-03 11:01:42.138  INFO 35395 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
-2019-12-03 11:01:42.140  INFO 35395 --- [main] com.example.postapi.PostsApiApplication  : Started PostsApiApplication in 17.468 seconds (JVM running for 23.298)
-2019-12-03 11:02:25.602  INFO 35395 --- [http-nio-8083-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-12-03 11:02:25.604  INFO 35395 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2019-12-03 11:02:25.627  INFO 35395 --- [http-nio-8083-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
-2019-12-03 11:05:56.899  INFO 35395 --- [SpringContextShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application POSTS with eureka with status DOWN
-2019-12-03 11:05:56.902  WARN 35395 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1575389156902, current=DOWN, previous=UP]
-2019-12-03 11:05:56.905  INFO 35395 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/172.16.7.201:posts:8083: registering service...
-2019-12-03 11:05:56.935  INFO 35395 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/172.16.7.201:posts:8083 - registration status: 204
-2019-12-03 11:05:56.986  INFO 35395 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2019-12-03 11:05:57.028  INFO 35395 --- [SpringContextShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2019-12-03 11:05:57.060  INFO 35395 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
-2019-12-03 11:06:00.064  INFO 35395 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
-2019-12-03 11:06:00.078  INFO 35395 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_POSTS/172.16.7.201:posts:8083 - deregister  status: 200
-2019-12-03 11:06:00.164  INFO 35395 --- [SpringContextShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
-2019-12-03 11:06:00.166  INFO 35395 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2019-12-03 11:06:00.226  INFO 35395 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2019-12-04 05:01:10.447  INFO 59 --- [main] com.example.postapi.PostsApiApplication  : The following profiles are active: dev
+2019-12-04 05:01:18.016  INFO 59 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-12-04 05:01:18.707  INFO 59 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 622ms. Found 1 repository interfaces.
+2019-12-04 05:01:20.552  INFO 59 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b38dcd54-8803-379a-bb6e-b07919b32fb8
+2019-12-04 05:01:21.759  INFO 59 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 05:01:22.054  INFO 59 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$fbbb2d45] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-12-04 05:01:23.749  INFO 59 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2019-12-04 05:01:23.872  INFO 59 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-12-04 05:01:23.876  INFO 59 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2019-12-04 05:01:24.651  INFO 59 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-12-04 05:01:24.654  INFO 59 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 13722 ms
+2019-12-04 05:01:26.904  INFO 59 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2019-12-04 05:01:27.678  INFO 59 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2019-12-04 05:01:29.674  INFO 59 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2019-12-04 05:01:30.848  INFO 59 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2019-12-04 05:01:37.217  INFO 59 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2019-12-04 05:01:37.964  INFO 59 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2019-12-04 05:01:38.151  INFO 59 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-12-04 05:01:38.402  INFO 59 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-12-04 05:01:41.643  WARN 59 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-12-04 05:01:44.156  WARN 59 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 05:01:44.162  INFO 59 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 05:01:44.204  WARN 59 --- [main] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2019-12-04 05:01:44.211  INFO 59 --- [main] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2019-12-04 05:01:44.970  INFO 59 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-12-04 05:01:47.943  INFO 59 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 6e66f1f5-852e-490f-ba2c-5e1c6d55e6a5
+
+2019-12-04 05:01:48.713  INFO 59 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7ef4aceb, org.springframework.security.web.context.SecurityContextPersistenceFilter@23c72128, org.springframework.security.web.header.HeaderWriterFilter@12421766, org.springframework.security.web.csrf.CsrfFilter@6d0a14c2, org.springframework.security.web.authentication.logout.LogoutFilter@3815a7d1, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e8986b6, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@40b54762, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@31b650e9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@31443680, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2890e479, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@a0e33db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@683fe7b5, org.springframework.security.web.session.SessionManagementFilter@731e0bff, org.springframework.security.web.access.ExceptionTranslationFilter@77d54a41, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@50fa5938]
+2019-12-04 05:01:49.765  INFO 59 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2019-12-04 05:01:50.244  INFO 59 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2019-12-04 05:01:52.321  INFO 59 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2019-12-04 05:01:52.329  INFO 59 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2019-12-04 05:01:59.309  INFO 59 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2019-12-04 05:01:59.346  INFO 59 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2019-12-04 05:09:34.671  WARN 59 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s906ms674µs700ns).
